@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TriGuard · Multimodal Authentication</title>
+<style>
+  /* ============================================================
+     TriGuard web console — v2 (professional dark UI, offline-first)
+     Event contract with server unchanged (SSE /api/events).
+     ============================================================ */
+  :root{
+    --bg0:#0a0f13; --bg1:#0e161b; --card:rgba(19,29,35,.78);
+    --card-solid:#14212a; --line:rgba(150,200,205,.13);
+    --ink:#e9f3f0; --muted:#8ba1a6; --faint:#5d7378;
+    --teal:#2dd4bf; --teal-deep:#0f4a52; --blue:#38bdf8;
+    --gold:#e8b654; --ok:#34d399; --bad:#f87171; --wait:#fbbf24;
+    --grad:linear-gradient(135deg,#2dd4bf 0%,#38bdf8 100%);
+    --r:14px; --shadow:0 18px 45px -18px rgba(0,0,0,.7);
+    --inner:inset 0 1px 0 rgba(255,255,255,.05);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scrollbar-gutter:stable}
+  body{background:
+        radial-gradient(1100px 500px at 15% -10%, rgba(45,212,191,.10), transparent 60%),
+        radial-gradient(900px 460px at 110% 0%, rgba(56,189,248,.08), transparent 55%),
+        linear-gradient(180deg,var(--bg0),var(--bg1));
+      color:var(--ink);
+      min-height:100vh;
+      font:15px/1.55 "Segoe UI",system-ui,-apple-system,sans-serif;
+      -webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1120px;margin:0 auto;padding:20px 20px 64px}
+  button{font:inherit;cursor:pointer}
+  .hidden{display:none !important}
+  :focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:4px}
+
+  /* ---------------- top bar ---------------- */
+  header{display:flex;align-items:center;gap:14px;padding:6px 2px 20px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .logo{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;
+        background:var(--grad);box-shadow:0 8px 24px -8px rgba(45,212,191,.55);color:#06212b;flex:none}
+  header h1{font-size:20px;font-weight:700;letter-spacing:.4px}
+  header .sub{font-size:12px;color:var(--muted);letter-spacing:.3px}
+  .spacer{flex:1}
+  .chip{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:600;
+        padding:6px 12px;border-radius:999px;border:1px solid var(--line);
+        background:rgba(255,255,255,.03);color:var(--muted);white-space:nowrap}
+  .chip .t{font-variant-numeric:tabular-nums}
+  #connDot{width:8px;height:8px;border-radius:50%;background:var(--wait);flex:none}
+  #connDot.on{background:var(--ok);box-shadow:0 0 8px var(--ok)}
+  .pill{font-size:12.5px;font-weight:700;padding:7px 14px;border-radius:999px;
+        background:rgba(255,255,255,.04);color:var(--muted);border:1px solid var(--line);
+        display:inline-flex;align-items:center;gap:8px}
+  .pill .dot{width:8px;height:8px;border-radius:50%;background:currentColor;flex:none}
+  .pill.ready{color:var(--ok);border-color:rgba(52,211,153,.35);background:rgba(52,211,153,.08)}
+  .pill.running{color:var(--wait);border-color:rgba(251,191,36,.4);background:rgba(251,191,36,.08)}
+  .pill.error{color:var(--bad);border-color:rgba(248,113,113,.4);background:rgba(248,113,113,.08)}
+  .pill.loading{color:var(--blue)}
+  .pill.running .dot{animation:pulse 1.2s infinite}
+
+  @keyframes pulse{50%{opacity:.35;transform:scale(.86)}}
+
+  /* ---------------- layout ---------------- */
+  .grid{display:grid;grid-template-columns:1.5fr 1fr;gap:18px;align-items:start}
+  @media(max-width:920px){.grid{grid-template-columns:1fr}}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+        padding:16px;box-shadow:var(--shadow);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+        margin-bottom:16px;position:relative}
+  .card h2{font-size:11.5px;text-transform:uppercase;letter-spacing:1.6px;color:var(--muted);
+        font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+  .card h2 .ln{flex:1;height:1px;background:var(--line)}
+
+  /* ---------------- camera stage ---------------- */
+  .stage{position:relative;aspect-ratio:16/9;background:#04090c;border-radius:12px;overflow:hidden;
+        border:1px solid var(--line)}
+  .stage img{width:100%;height:100%;object-fit:cover;display:block}
+  .frame{position:absolute;inset:0;pointer-events:none}
+  .frame i{position:absolute;width:22px;height:22px;border:2px solid var(--teal);
+        opacity:.85;filter:drop-shadow(0 0 4px rgba(45,212,191,.6))}
+  .frame .tl{top:10px;left:10px;border-right:0;border-bottom:0;border-radius:6px 0 0 0}
+  .frame .tr{top:10px;right:10px;border-left:0;border-bottom:0;border-radius:0 6px 0 0}
+  .frame .bl{bottom:10px;left:10px;border-right:0;border-top:0;border-radius:0 0 0 6px}
+  .frame .br{bottom:10px;right:10px;border-left:0;border-top:0;border-radius:0 0 6px 0}
+  #nosignal{position:absolute;inset:0;display:none;place-items:center;color:var(--faint);
+        font-size:12px;letter-spacing:2px;text-transform:uppercase}
+  .liveTag{position:absolute;top:14px;left:14px;font-size:10.5px;font-weight:800;letter-spacing:2px;
+        color:var(--bad);display:flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;
+        background:rgba(0,0,0,.55);border:1px solid rgba(248,113,113,.35)}
+  .liveTag i{width:8px;height:8px;border-radius:50%;background:var(--bad);animation:pulse 1s infinite}
+  #recDot{position:absolute;top:14px;right:14px;display:none;align-items:center;gap:7px;
+        font-size:11px;font-weight:800;letter-spacing:1.5px;color:#fff;padding:5px 11px;border-radius:999px;
+        background:rgba(220,38,38,.85)}
+  #recDot i{width:8px;height:8px;border-radius:50%;background:#fff;animation:pulse 1s infinite}
+
+  /* countdown ring */
+  #countdown{position:absolute;inset:0;display:none;place-items:center;
+        background:rgba(4,9,12,.62);backdrop-filter:blur(2px)}
+  .ring{position:relative;width:190px;height:190px}
+  .ring svg{transform:rotate(-90deg)}
+  .ring .track{stroke:rgba(255,255,255,.14)}
+  .ring .bar{stroke:url(#cg);stroke-linecap:round;transition:stroke-dashoffset .3s ease}
+  .ring .num{position:absolute;inset:0;display:grid;place-items:center;
+        font-size:74px;font-weight:800;color:#fff;text-shadow:0 4px 20px rgba(0,0,0,.5)}
+
+  /* challenge sentence */
+  #challenge{display:none;margin-top:12px;padding:12px 16px;border-radius:12px;
+        background:linear-gradient(135deg,rgba(45,212,191,.10),rgba(56,189,248,.07));
+        border:1px solid rgba(45,212,191,.25)}
+  #challenge .lab{font-size:10px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold)}
+  #challenge .txt{font-size:18px;font-weight:700;color:var(--ink);margin-top:3px;line-height:1.35}
+
+  /* ---------------- steps ---------------- */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+  .step{display:flex;flex-direction:column;gap:6px;position:relative}
+  .step .bar{height:3px;border-radius:3px;background:rgba(255,255,255,.07);overflow:hidden}
+  .step .bar i{display:block;height:100%;width:0;border-radius:3px;background:var(--grad);
+        transition:width .8s cubic-bezier(.2,.8,.2,1)}
+  .step .lab{font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--faint)}
+  .step.active .lab{color:var(--teal)}
+  .step.done .lab{color:var(--ok)}
+  .step.done .bar i,.step.active .bar i{width:100%}
+  .step.active .bar i{width:60%;animation:grow 1.4s ease infinite alternate}
+
+  /* ---------------- session card ---------------- */
+  #sysMsg{font-size:13.5px;color:var(--muted);min-height:22px}
+  .startBtn{width:100%;padding:16px;border:none;border-radius:12px;color:#06212b;
+        background:var(--grad);font-size:16px;font-weight:800;letter-spacing:.8px;margin-top:14px;
+        box-shadow:0 10px 28px -10px rgba(45,212,191,.6);position:relative;overflow:hidden;
+        transition:transform .15s ease,box-shadow .15s ease,filter .15s ease}
+  .startBtn:hover:not(:disabled){transform:translateY(-2px);filter:brightness(1.06);
+        box-shadow:0 16px 34px -12px rgba(45,212,191,.7)}
+  .startBtn:active:not(:disabled){transform:translateY(0)}
+  .startBtn:disabled{background:rgba(255,255,255,.08);color:var(--faint);box-shadow:none;cursor:not-allowed}
+  .kbd{font-size:11.5px;color:var(--faint);margin-top:10px;text-align:center}
+  .kbd kbd{font-family:inherit;border:1px solid var(--line);border-bottom-width:2px;border-radius:6px;
+        padding:2px 8px;background:rgba(255,255,255,.04);color:var(--muted);font-size:11px}
+
+  /* ---------------- module cards ---------------- */
+  .mod{display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:12px 14px;
+        border:1px solid var(--line);border-radius:12px;background:rgba(0,0,0,.18);margin-bottom:9px;
+        transition:border-color .3s ease}
+  .mod .ic{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;
+        background:rgba(255,255,255,.04);color:var(--muted);flex:none;border:1px solid var(--line)}
+  .mod .name{font-weight:700;flex:1;letter-spacing:.2px}
+  .mod .st{font-size:11.5px;color:var(--faint);text-align:right;font-weight:600;letter-spacing:.5px}
+  .mod .grow{flex-basis:100%;height:3px;border-radius:3px;background:rgba(255,255,255,.06);overflow:hidden}
+  .mod .grow i{display:block;height:100%;width:0;border-radius:3px;background:var(--grad)}
+  .mod .score{font-size:13px;font-weight:800;font-variant-numeric:tabular-nums;min-width:64px;
+        text-align:right;color:var(--muted)}
+  .mod .msg{flex-basis:100%;font-size:12px;color:var(--faint)}
+  .mod.running{border-color:rgba(251,191,36,.35)}
+  .mod.running .st{color:var(--wait)}
+  .mod.running .grow i{width:100%;animation:slide 1.3s linear infinite}
+  .mod.pass{border-color:rgba(52,211,153,.4)}
+  .mod.pass .st,.mod.pass .score{color:var(--ok)}
+  .mod.pass .ic{color:var(--ok);border-color:rgba(52,211,153,.4)}
+  .mod.fail{border-color:rgba(248,113,113,.4)}
+  .mod.fail .st,.mod.fail .score{color:var(--bad)}
+  .mod.fail .ic{color:var(--bad);border-color:rgba(248,113,113,.4)}
+  @keyframes slide{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+  @keyframes grow{from{width:40%}to{width:85%}}
+
+  /* ---------------- result ---------------- */
+  .verdict{font-size:20px;font-weight:800;letter-spacing:.6px;text-align:center;padding:16px;
+        border-radius:12px;display:flex;align-items:center;justify-content:center;gap:10px}
+  .verdict.ok{background:rgba(52,211,153,.12);color:var(--ok);border:1px solid rgba(52,211,153,.35);
+        animation:pop .5s cubic-bezier(.2,1.4,.4,1)}
+  .verdict.no{background:rgba(248,113,113,.12);color:var(--bad);border:1px solid rgba(248,113,113,.35);
+        animation:shake .45s ease}
+  @keyframes pop{0%{transform:scale(.86);opacity:0}100%{transform:scale(1);opacity:1}}
+  @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-7px)}
+        50%{transform:translateX(6px)}75%{transform:translateX(-4px)}}
+  .res-row{display:flex;justify-content:space-between;padding:9px 2px;border-bottom:1px dashed var(--line);font-size:14px}
+  .res-row:last-child{border-bottom:none}
+  .res-row .k{color:var(--muted)}
+  .res-row .v{font-weight:700;font-variant-numeric:tabular-nums}
+  .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  .chipscore{font-size:12px;font-weight:700;padding:6px 12px;border-radius:999px;display:inline-flex;gap:6px;
+        align-items:center;border:1px solid var(--line);background:rgba(255,255,255,.03)}
+  .chipscore.pass{color:var(--ok);border-color:rgba(52,211,153,.35)}
+  .chipscore.fail{color:var(--bad);border-color:rgba(248,113,113,.35)}
+  table.t{width:100%;border-collapse:collapse;font-size:13px}
+  table.t td{padding:7px 6px;border-bottom:1px dashed var(--line);color:var(--muted)}
+  table.t td:last-child{text-align:right;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums}
+  table.t tr:last-child td{border-bottom:none;font-size:14px;color:var(--teal)}
+  .timing-note{font-size:12px;color:var(--faint);margin-top:8px;line-height:1.5}
+
+  /* history */
+  .hist{display:flex;flex-direction:column;gap:8px}
+  .hrow{display:flex;align-items:center;gap:12px;padding:9px 12px;border:1px solid var(--line);
+        border-radius:10px;background:rgba(0,0,0,.16);font-size:13px}
+  .hrow .dot{width:9px;height:9px;border-radius:50%;flex:none}
+  .hrow.ok .dot{background:var(--ok)} .hrow.no .dot{background:var(--bad)}
+  .hrow .id{font-weight:700;flex:1}
+  .hrow .tm{color:var(--faint);font-variant-numeric:tabular-nums;font-size:12px}
+  .hrow .sc{color:var(--muted);font-variant-numeric:tabular-nums}
+
+  /* log */
+  details{margin-top:4px}
+  summary{cursor:pointer;font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.8px;
+        text-transform:uppercase;user-select:none}
+  #log{font:11.5px/1.6 Consolas,monospace;color:#9fb4b8;background:rgba(0,0,0,.25);
+        border:1px solid var(--line);border-radius:10px;padding:10px;max-height:170px;overflow:auto;margin-top:8px}
+  #log .info{color:#7fd1d8} #log .error{color:var(--bad)}
+
+  footer{margin-top:26px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;
+        font-size:11.5px;color:var(--faint)}
+  footer .ln{flex:1}
+
+  .toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(20px);
+        background:var(--card-solid);border:1px solid var(--line);color:var(--ink);
+        padding:12px 20px;border-radius:12px;font-size:13.5px;box-shadow:var(--shadow);
+        opacity:0;pointer-events:none;transition:all .3s ease;z-index:50;max-width:min(480px,90vw)}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+  .toast.bad{border-color:rgba(248,113,113,.5)} .toast.ok{border-color:rgba(52,211,153,.5)}
+
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs>
+  <linearGradient id="cg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#2dd4bf"/><stop offset="1" stop-color="#38bdf8"/>
+  </linearGradient>
+</defs></svg>
+
+<div class="wrap">
+
+  <header>
+    <div class="brand">
+      <div class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/>
+          <circle cx="12" cy="11" r="2.4"/><circle cx="12" cy="11" r="4.6" opacity=".55"/>
+        </svg>
+      </div>
+      <div>
+        <h1>TriGuard</h1>
+        <div class="sub">Face · Voice · Lip — one shared recording</div>
+      </div>
+    </div>
+    <div class="spacer"></div>
+    <div class="chip" id="chipPreload" title="One-time model load time"><span class="t">models…</span></div>
+    <div class="pill loading" id="pill"><span class="dot"></span><span id="pillTxt">Connecting…</span></div>
+  </header>
+
+  <div class="grid">
+
+    <!-- ================= LEFT ================= -->
+    <div>
+      <div class="card">
+        <div class="stage">
+          <img id="cam" src="/api/preview.mjpg" alt="camera preview">
+          <div class="frame"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
+          <div id="nosignal">No signal</div>
+          <div class="liveTag"><i></i>LIVE</div>
+          <div id="recDot"><i></i>REC</div>
+          <div id="countdown">
+            <div class="ring">
+              <svg width="190" height="190" viewBox="0 0 190 190">
+                <circle class="track" cx="95" cy="95" r="86" fill="none" stroke-width="9"/>
+                <circle class="bar" id="ringBar" cx="95" cy="95" r="86" fill="none" stroke-width="9"
+                        stroke-dasharray="540.35" stroke-dashoffset="540.35"/>
+              </svg>
+              <div class="num" id="countNum">3</div>
+            </div>
+          </div>
+        </div>
+        <div id="challenge">
+          <div class="lab">Read this sentence aloud</div>
+          <div class="txt" id="challengeTxt">…</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Session <span class="ln"></span></h2>
+        <div class="steps">
+          <div class="step done" id="st1"><div class="bar"><i></i></div><div class="lab">Check-in</div></div>
+          <div class="step" id="st2"><div class="bar"><i></i></div><div class="lab">Capture</div></div>
+          <div class="step" id="st3"><div class="bar"><i></i></div><div class="lab">Analyze</div></div>
+          <div class="step" id="st4"><div class="bar"><i></i></div><div class="lab">Result</div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>How it works <span class="ln"></span></h2>
+        <p style="font-size:13.5px;color:var(--muted)">
+          Sit alone in a quiet room, facing the camera. Start a session, read the
+          challenge sentence during the recording. Your <b style="color:var(--ink)">face</b>,
+          <b style="color:var(--ink)">voice</b> and <b style="color:var(--ink)">lip movement</b>
+          are verified from one shared clip — a triple check against spoofing.
+          Analysis runs locally; nothing leaves this machine.
+        </p>
+      </div>
+    </div>
+
+    <!-- ================= RIGHT ================= -->
+    <div>
+      <div class="card">
+        <h2>Start session <span class="ln"></span></h2>
+        <div id="sysMsg">Connecting to TriGuard server…</div>
+        <button class="startBtn" id="startBtn" disabled>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px;margin-right:8px">
+            <path d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5Zm-3 8V7a3 3 0 1 1 6 0v3Z"/>
+          </svg>START AUTHENTICATION
+        </button>
+        <div class="kbd">Press <kbd>Enter</kbd> to start</div>
+      </div>
+
+      <div class="card">
+        <h2>Modules <span class="ln"></span></h2>
+        <div class="mod" id="m-face">
+          <span class="ic"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg></span>
+          <span class="name">Face</span><span class="score">—</span><span class="st">idle</span>
+          <span class="grow"><i></i></span><span class="msg"></span>
+        </div>
+        <div class="mod" id="m-voice">
+          <span class="ic"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span>
+          <span class="name">Voice</span><span class="score">—</span><span class="st">idle</span>
+          <span class="grow"><i></i></span><span class="msg"></span>
+        </div>
+        <div class="mod" id="m-lip">
+          <span class="ic"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8c-2.5 0-5-1.5-5-4 0 3 2.5 4.5 5 4.5S19 7 17 4c0 2.5-2.5 4-5 4Z"/><path d="M3 16c2.5-3 5-4.5 9-4.5s6.5 1.5 9 4.5c-3 1.8-6 2.7-9 2.7S6 17.8 3 16Z"/></svg></span>
+          <span class="name">Lip (liveness)</span><span class="score">—</span><span class="st">idle</span>
+          <span class="grow"><i></i></span><span class="msg"></span>
+        </div>
+      </div>
+
+      <div class="card hidden" id="result">
+        <h2>Result <span class="ln"></span></h2>
+        <div class="verdict" id="verdict"></div>
+        <div style="margin-top:12px">
+          <div class="res-row"><span class="k">Identity</span><span class="v" id="rIdentity">—</span></div>
+          <div class="res-row"><span class="k">Final score</span><span class="v" id="rScore">—</span></div>
+          <div class="res-row"><span class="k">Decision</span><span class="v" id="rPass">—</span></div>
+        </div>
+        <div style="margin-top:12px">
+          <div class="res-row" style="align-items:center">
+            <span class="k">Capture snapshot</span>
+            <span class="v"><img id="rSnap" alt="capture snapshot" style="max-width:150px;max-height:110px;border-radius:10px;border:1px solid var(--line);display:block;margin-left:auto"></span>
+          </div>
+        </div>
+        <div class="chips" id="rChips"></div>
+        <div class="note" style="font-size:13px;color:var(--muted);margin-top:8px" id="rSummary"></div>
+      </div>
+
+      <div class="card hidden" id="timingCard">
+        <h2>Timing breakdown <span class="ln"></span></h2>
+        <table class="t">
+          <tr><td>Countdown</td><td id="tCount">—</td></tr>
+          <tr><td>Recording (video + audio)</td><td id="tRec">—</td></tr>
+          <tr><td>Face analysis</td><td id="tFace">—</td></tr>
+          <tr><td>Voice analysis</td><td id="tVoice">—</td></tr>
+          <tr><td>Lip analysis</td><td id="tLip">—</td></tr>
+          <tr><td>Total session</td><td id="tTotal">—</td></tr>
+        </table>
+        <div class="timing-note" id="tNote"></div>
+      </div>
+
+      <div class="card hidden" id="historyCard">
+        <h2>Session history <span class="ln"></span></h2>
+        <div class="hist" id="historyList"></div>
+      </div>
+
+      <details>
+        <summary>Activity log</summary>
+        <div id="log"></div>
+      </details>
+    </div>
+  </div>
+
+  <footer>
+    <span>TRI-GUARD · MULTIMODAL AUTHENTICATION CONSOLE</span>
+    <span class="ln"></span>
+    <span id="footStatus">system loading…</span>
+  </footer>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+"use strict";
+/* ---------------------------------------------------------------
+   TriGuard v2 console script — same SSE contract, no server change.
+   --------------------------------------------------------------- */
+const $ = id => document.getElementById(id);
+const mods = {face:$("m-face"), voice:$("m-voice"), lip:$("m-lip")};
+const RING_C = 2 * Math.PI * 86;              // 540.35
+let running = false;
+let moduleResults = {};                        // per-module final scores from SSE
+let ringMax = null;                            // countdown length, learned on first tick
+const history = [];                            // client-side recent verdicts
+const ringBar = $("ringBar");
+
+function setPill(status){
+  const p = $("pill"), t = $("pillTxt");
+  p.className = "pill " + (status || "loading");
+  t.textContent = status==="ready" ? "Ready" : status==="running" ? "Running…"
+                : status==="error" ? "Error" : "Loading";
+}
+function setSteps(n){  [1,2,3,4].forEach(i=>{
+    const el = $(`st${i}`);
+    el.classList.toggle("done", i < n);
+    el.classList.toggle("active", i === n);
+  });
+}
+function toast(msg, kind){
+  const el = $("toast");
+  el.textContent = msg;
+  el.className = "toast show" + (kind==="bad"?" bad":kind==="ok"?" ok":"");
+  clearTimeout(toast._t);
+  toast._t = setTimeout(()=> el.className = "toast", 3200);
+}
+function log(msg, level){
+  const line = document.createElement("div");
+  line.className = level || "info";
+  line.textContent = `[${new Date().toLocaleTimeString()}] ${msg}`;
+  $("log").prepend(line);
+}
+function setMod(name, state, score, text, msg){
+  const el = mods[name]; if(!el) return;
+  el.className = "mod " + state;
+  el.querySelector(".score").textContent = score==null ? "—" : score;
+  el.querySelector(".st").textContent = text || state;
+  el.querySelector(".msg").textContent = msg || "";
+  if(state === "pass" || state === "fail"){
+    moduleResults[name] = {passed: state === "pass", score};
+  } else {
+    delete moduleResults[name];
+  }
+}
+function resetMods(){ ["face","voice","lip"].forEach(n => setMod(n,"",null,"idle","")); moduleResults = {}; }
+function refreshCam(){ $("cam").src = "/api/preview.mjpg?t=" + Date.now(); }
+function fmtSec(s, dp){ return s==null ? "—" : (typeof s==="number" ? s.toFixed(dp||1) : s) + " s"; }
+function fmtScore(s){ return s==null ? "—" : (typeof s==="number" ? (Math.round(s*100)) + "%" : String(s)); }
+function countdownFrac(remaining, max){
+  if(remaining == null) return 0;
+  const m = max && max > 0 ? max : 3;
+  return Math.max(0, Math.min(1, remaining / m));
+}
+
+/* ---------------- result ---------------- */
+function buildChips(chipsEl){
+  chipsEl.innerHTML = "";
+  for(const n of ["face","voice","lip"]){
+    const r = moduleResults[n];
+    const span = document.createElement("span");
+    span.className = "chipscore " + (r ? (r.passed ? "pass" : "fail") : "");
+    span.textContent = `${n[0].toUpperCase() + n.slice(1)} · ` +
+      (r ? (r.passed ? "PASS" : "FAIL") + " · " + fmtScore(r.score) : "n/a");
+    chipsEl.appendChild(span);
+  }
+}
+function showResult(r){
+  $("result").classList.remove("hidden");
+  $("rSnap").src = "/api/snapshot.jpg?t=" + Date.now();
+  const ok = r.authenticated === true;
+  const v = $("verdict");
+  v.innerHTML = (ok
+      ? `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>AUTHENTICATED`
+      : `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15 9l-6 6M9 9l6 6"/></svg>${r.cancelled ? "CANCELLED" : "ACCESS DENIED"}`);
+  v.className = "verdict " + (ok ? "ok" : "no");
+  $("rIdentity").textContent = r.identity || "unknown";
+  $("rScore").textContent = fmtScore(r.final_score);
+  $("rPass").textContent = ok ? "GRANTED" : (r.cancelled ? "ABORTED" : "DENIED");
+  $("rSummary").textContent = r.summary || "";
+  $("rChips").innerHTML = "";
+  buildChips($("rChips"));
+
+  const t = r.timings || {};
+  $("timingCard").classList.remove("hidden");
+  $("tCount").textContent = fmtSec(t.countdown_s);
+  $("tRec").textContent = fmtSec(t.recording_s);
+  const ms = t.modules_s || {};
+  $("tFace").textContent = fmtSec(ms.face);
+  $("tVoice").textContent = fmtSec(ms.voice);
+  $("tLip").textContent = fmtSec(ms.lip);
+  $("tTotal").textContent = fmtSec(t.total_s);
+  $("tNote").textContent = t.analysis_parallel_s != null
+    ? `Modules run in parallel — wall-clock analysis ≈ ${t.analysis_parallel_s}s (sum = ${t.analysis_sum_s}s).`
+    : "";
+  refreshCam();
+}
+function addHistory(h){
+  history.unshift(h);
+  if(history.length > 6) history.pop();
+  renderHistory();
+}
+function renderHistory(){
+  const card = $("historyCard"), list = $("historyList");
+  if(!history.length){ card.classList.add("hidden"); return; }
+  card.classList.remove("hidden");
+  list.innerHTML = "";
+  history.forEach(h=>{
+    const row = document.createElement("div");
+    row.className = "hrow " + (h.authenticated ? "ok" : "no");
+    const dot = document.createElement("span"); dot.className = "dot";
+    const id = document.createElement("span"); id.className = "id";
+    id.textContent = h.identity || "unknown";
+    const tm = document.createElement("span"); tm.className = "tm";
+    tm.textContent = h.at || new Date().toLocaleTimeString();
+    const sc = document.createElement("span"); sc.className = "sc";
+    sc.textContent = fmtScore(h.final_score);
+    row.append(dot, id, tm, sc);
+    list.appendChild(row);
+  });
+}
+
+/* ---------------- SSE ---------------- */
+function handleEvent(ev){
+  switch(ev.type){
+    case "status":
+      setPill(ev.status);
+      if(ev.status === "ready"){
+        setSteps(1);
+        $("startBtn").disabled = false;
+        $("sysMsg").textContent = "Models ready — sit in front of the camera and start.";
+        $("footStatus").textContent = "system online · models ready";
+        if(ev.preload != null){ $("chipPreload").innerHTML = `<span class="t">models ready · ${ev.preload}s</span>`; log(`Models preloaded in ${ev.preload}s`); }
+        if(!running) refreshCam();
+      } else if(ev.status === "running"){
+        running = true;
+        $("startBtn").disabled = true;
+        setSteps(2);
+        resetMods();
+        $("result").classList.add("hidden");
+        $("timingCard").classList.add("hidden");
+        $("sysMsg").textContent = "Session running — follow the countdown.";
+        $("footStatus").textContent = "system online · session running";
+      } else if(ev.status === "error"){
+        $("startBtn").disabled = true;
+        $("sysMsg").textContent = "System failed to load. See log.";
+        $("pill").classList.add("error");
+      }
+      break;
+
+    case "capture":
+      if(ev.stage === "challenge_selected"){
+        const d = ev.details || {};
+        if(d.chosen_sentence){
+          $("challenge").style.display = "block";
+          $("challengeTxt").textContent = d.chosen_sentence;
+        }
+      } else if(ev.stage === "countdown_started"){
+        $("countdown").style.display = "grid";
+        ringMax = null;
+        setSteps(2);
+      } else if(ev.stage === "countdown_tick"){
+        const d = ev.details || {};
+        const rem = d.seconds_remaining;
+        if(rem != null){
+          if(ringMax == null) ringMax = rem;
+          $("countNum").textContent = rem;
+          ringBar.style.strokeDashoffset = RING_C * (1 - countdownFrac(rem, ringMax));
+        }
+        log(`Recording starts in ${rem}s…`);
+      } else if(ev.stage === "recording_started"){
+        $("countdown").style.display = "none";
+        $("recDot").style.display = "flex";
+        setSteps(2);
+        log("Recording — speak now.");
+      } else if(ev.stage === "recording_finished"){
+        $("recDot").style.display = "none";
+        setSteps(3);
+        log("Recording finished — analyzing.");
+      } else if(ev.stage === "face_abort"){
+        toast("More than one face detected — aborted", "bad");
+        log("ABORTED: more than one face detected.", "error");
+      } else if(ev.stage === "error"){
+        toast(ev.message, "bad");
+        log(ev.message, "error");
+      } else if(ev.stage === "capture_complete"){
+        setSteps(3);
+        $("sysMsg").textContent = "Analyzing face, voice and lip…";
+        log(ev.message);
+      }
+      break;
+
+    case "module": {
+      const d = ev.details || {};
+      if(ev.stage === "starting"){
+        setMod(ev.module, "running", null, "starting…", ev.message);
+      } else if(ev.stage === "running"){
+        setMod(ev.module, "running", null, ev.message || "running…");
+      } else if(ev.stage === "finished"){
+        const st = d.passed ? "PASS" : "FAIL";
+        setMod(ev.module, d.passed ? "pass" : "fail", fmtScore(d.score), st, ev.message);
+        log(`[${ev.module.toUpperCase()}] ${st} — ${ev.message}`);
+      } else if(ev.stage === "failed"){
+        setMod(ev.module, "fail", null, "FAILED", ev.message);
+        log(`[${ev.module.toUpperCase()}] FAILED: ${ev.message}`, "error");
+      } else if(ev.stage === "skipped"){
+        setMod(ev.module, "fail", null, "skipped", "module skipped");
+      }
+      break;
+    }
+
+    case "result":
+      running = false;
+      $("startBtn").disabled = false;
+      setSteps(4);
+      $("sysMsg").textContent = "Session finished — you can start another.";
+      showResult(ev.result);
+      addHistory(ev.result);
+      toast(ev.result.authenticated ? "Identity verified ✓" : "Access not granted", ev.result.authenticated ? "ok" : "bad");
+      break;
+
+    case "log":
+      log(ev.message, ev.level);
+      break;
+  }
+}
+
+/* ---------------- init ---------------- */
+document.addEventListener("DOMContentLoaded", () => {
+  setSteps(1);
+  moduleResults = {};
+
+  const es = new EventSource("/api/events");
+  es.onopen = () => { $("connDot").classList.add("on"); $("pillTxt").textContent = "Connected"; };
+  es.onmessage = e => { try { handleEvent(JSON.parse(e.data)); } catch(_){} };
+  es.onerror = () => {
+    $("connDot").classList.remove("on");
+    $("sysMsg").textContent = "Connection to server lost — retrying…";
+    $("pill").className = "pill error"; $("pillTxt").textContent = "Offline";
+  };
+
+  const start = async () => {
+    if($("startBtn").disabled) return;
+    try {
+      const res = await fetch("/api/start", {method:"POST"});
+      const body = await res.json();
+      if(!body.ok){ toast(body.error || "Could not start.", "bad"); log(body.error||"start failed","error"); }
+    } catch(err){ toast("Server unreachable.", "bad"); log("Server unreachable: " + err.message, "error"); }
+  };
+  $("startBtn").addEventListener("click", start);
+  document.addEventListener("keydown", e => {
+    if(e.key === "Enter" && !$("startBtn").disabled) start();
+  });
+
+  fetch("/api/status").then(r=>r.json()).then(s=>{
+    setPill(s.status);
+    $("connDot").classList.add("on");
+    if(s.history && s.history.length){
+      history.push(...s.history.slice().reverse());   // server keeps newest-last
+      renderHistory();
+    }
+    if(s.status === "ready"){
+      $("startBtn").disabled = false;
+      if(s.preload != null) $("chipPreload").innerHTML = `<span class="t">models ready · ${s.preload}s</span>`;
+      $("sysMsg").textContent = "Models ready — sit in front of the camera and start.";
+      $("footStatus").textContent = "system online · models ready";
+      refreshCam();
+    }
+    if(s.last_result){ showResult(s.last_result); }
+    setSteps(s.status === "running" ? 2 : 1);
+  }).catch(()=>{ setPill("error"); toast("Cannot reach server — run  python webapp/app.py", "bad"); });
+});
+</script>
+</body>
+</html>

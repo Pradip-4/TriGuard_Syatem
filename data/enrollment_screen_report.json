@@ -1,0 +1,180 @@
+{
+  "threshold": 4.1,
+  "note": "Preventive enrollment QA. Source folders are NOT modified.",
+  "identities": {
+    "2217010": {
+      "photos_in_folder": 16,
+      "embedded": 16,
+      "no_face_detected": [],
+      "components": [
+        9,
+        6,
+        1
+      ],
+      "dominant_face_photos": [
+        "IMG_20260606_183021.png",
+        "IMG_20260606_183122.jpg",
+        "IMG_20260606_183306.jpg",
+        "IMG_20260606_183417.jpg",
+        "IMG_20260606_183526.jpg",
+        "IMG_20260606_183855.jpg",
+        "IMG_20260606_184046.jpg",
+        "IMG_20260606_184524.jpg",
+        "IMG_20260606_184844.jpg"
+      ],
+      "flagged_photos": [
+        "IMG_20260606_182335.jpg",
+        "IMG_20260606_182355.jpg",
+        "IMG_20260606_183448.jpg",
+        "IMG_20260606_183823.jpg",
+        "IMG_20260606_183950.jpg",
+        "IMG_20260606_184144.jpg",
+        "IMG_20260606_185000.jpg"
+      ]
+    },
+    "2317009": {
+      "photos_in_folder": 15,
+      "embedded": 15,
+      "no_face_detected": [],
+      "components": [
+        14,
+        1
+      ],
+      "dominant_face_photos": [
+        "IMG_20260610_123550.jpg",
+        "IMG_20260610_123622.jpg",
+        "IMG_20260610_123654.jpg",
+        "IMG_20260610_123727.jpg",
+        "IMG_20260610_123828.jpg",
+        "IMG_20260610_123955.jpg",
+        "IMG_20260610_124112.jpg",
+        "IMG_20260610_124148.jpg",
+        "IMG_20260610_124314.jpg",
+        "IMG_20260610_124333.jpg",
+        "IMG_20260610_124432.jpg",
+        "IMG_20260610_124519.jpg",
+        "IMG_20260610_124554.jpg",
+        "IMG_20260610_124627.jpg"
+      ],
+      "flagged_photos": [
+        "IMG_20260610_124242.jpg"
+      ]
+    },
+    "2317046": {
+      "photos_in_folder": 15,
+      "embedded": 14,
+      "no_face_detected": [
+        "IMG_20260610_122801.jpg"
+      ],
+      "components": [
+        8,
+        6
+      ],
+      "dominant_face_photos": [
+        "IMG-20260610-WA0003.jpg",
+        "IMG_20260610_122546.jpg",
+        "IMG_20260610_122725.jpg",
+        "IMG_20260610_122910.jpg",
+        "IMG_20260610_123111.jpg",
+        "IMG_20260610_123638.jpg",
+        "IMG_20260610_123911.jpg",
+        "IMG_20260610_123950.jpg"
+      ],
+      "flagged_photos": [
+        "IMG-20260610-WA0002.jpg",
+        "IMG_20260610_122701.jpg",
+        "IMG_20260610_122801.jpg",
+        "IMG_20260610_123223.jpg",
+        "IMG_20260610_123600.jpg",
+        "IMG_20260610_123744.jpg",
+        "IMG_20260610_123818.jpg"
+      ]
+    }
+  },
+  "flagged_photos": [
+    {
+      "photo": "2217010/IMG_20260606_182335.jpg",
+      "nearest_dominant_identity": "2317046",
+      "distance_to_that_centroid": 2.044,
+      "action": "park in Unknown Data; do not enroll"
+    },
+    {
+      "photo": "2217010/IMG_20260606_182355.jpg",
+      "nearest_dominant_identity": "2317046",
+      "distance_to_that_centroid": 7.516,
+      "action": "park in Unknown Data; do not enroll"
+    },
+    {
+      "photo": "2217010/IMG_20260606_183448.jpg",
+      "nearest_dominant_identity": "2317046",
+      "distance_to_that_centroid": 2.534,
+      "action": "park in Unknown Data; do not enroll"
+    },
+    {
+      "photo": "2217010/IMG_20260606_183823.jpg",
+      "nearest_dominant_identity": "2317046",
+      "distance_to_that_centroid": 4.381,
+      "action": "park in Unknown Data; do not enroll"
+    },
+    {
+      "photo": "2217010/IMG_20260606_183950.jpg",
+      "nearest_dominant_identity": "2317046",
+      "distance_to_that_centroid": 2.808,
+      "action": "park in Unknown Data; do not enroll"
+    },
+    {
+      "photo": "2217010/IMG_20260606_184144.jpg",
+      "nearest_dominant_identity": "2317046",
+      "distance_to_that_centroid": 1.809,
+      "action": "park in Unknown Data; do not enroll"
+    },
+    {
+      "photo": "2217010/IMG_20260606_185000.jpg",
+      "nearest_dominant_identity": "2317046",
+      "distance_to_that_centroid": 4.935,
+      "action": "park in Unknown Data; do not enroll"
+    },
+    {
+      "photo": "2317009/IMG_20260610_124242.jpg",
+      "nearest_dominant_identity": "2317046",
+      "distance_to_that_centroid": 6.637,
+      "action": "park in Unknown Data; do not enroll"
+    },
+    {
+      "photo": "2317046/IMG-20260610-WA0002.jpg",
+      "nearest_dominant_identity": "2317009",
+      "distance_to_that_centroid": 5.519,
+      "action": "park in Unknown Data; do not enroll"
+    },
+    {
+      "photo": "2317046/IMG_20260610_122701.jpg",
+      "nearest_dominant_identity": "2317009",
+      "distance_to_that_centroid": 5.556,
+      "action": "park in Unknown Data; do not enroll"
+    },
+    {
+      "photo": "2317046/IMG_20260610_123223.jpg",
+      "nearest_dominant_identity": "2317009",
+      "distance_to_that_centroid": 5.411,
+      "action": "park in Unknown Data; do not enroll"
+    },
+    {
+      "photo": "2317046/IMG_20260610_123600.jpg",
+      "nearest_dominant_identity": "2317009",
+      "distance_to_that_centroid": 5.218,
+      "action": "park in Unknown Data; do not enroll"
+    },
+    {
+      "photo": "2317046/IMG_20260610_123744.jpg",
+      "nearest_dominant_identity": "2317009",
+      "distance_to_that_centroid": 5.939,
+      "action": "park in Unknown Data; do not enroll"
+    },
+    {
+      "photo": "2317046/IMG_20260610_123818.jpg",
+      "nearest_dominant_identity": "2317009",
+      "distance_to_that_centroid": 5.969,
+      "action": "park in Unknown Data; do not enroll"
+    }
+  ]
+}

@@ -1,0 +1,1157 @@
+2026-10-10 14:03:33  [INFO    ]  root — Logger initialized. Log file: logs/auth_2026-10-10.log
+2026-10-10 14:03:33  [INFO    ]  core.config_loader — Config loaded successfully.
+2026-10-10 14:03:33  [INFO    ]  core.config_loader — Active modules: ['face', 'voice', 'lip']
+2026-10-10 14:03:33  [INFO    ]  root — Logger initialized. Log file: logs/auth_2026-10-10.log
+2026-10-10 14:03:33  [INFO    ]  werkzeug — [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-10-10 14:03:33  [INFO    ]  werkzeug — [33mPress CTRL+C to quit[0m
+2026-10-10 14:03:42  [DEBUG   ]  tensorflow — Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2026-10-10 14:03:45  [DEBUG   ]  h5py._conv — Creating converter from 7 to 5
+2026-10-10 14:03:45  [DEBUG   ]  h5py._conv — Creating converter from 5 to 7
+2026-10-10 14:03:45  [DEBUG   ]  h5py._conv — Creating converter from 7 to 5
+2026-10-10 14:03:45  [DEBUG   ]  h5py._conv — Creating converter from 5 to 7
+2026-10-10 14:03:59  [DEBUG   ]  matplotlib — matplotlib data path: C:\Program Files\Python310\lib\site-packages\matplotlib\mpl-data
+2026-10-10 14:03:59  [DEBUG   ]  matplotlib — CONFIGDIR=C:\Users\User\.matplotlib
+2026-10-10 14:03:59  [DEBUG   ]  matplotlib — interactive is False
+2026-10-10 14:03:59  [DEBUG   ]  matplotlib — platform is win32
+2026-10-10 14:03:59  [DEBUG   ]  matplotlib — CACHEDIR=C:\Users\User\.matplotlib
+2026-10-10 14:03:59  [DEBUG   ]  matplotlib.font_manager — Using fontManager instance from C:\Users\User\.matplotlib\fontlist-v390.json
+2026-10-10 14:04:08  [INFO    ]  modules.face_module — [Face] Loaded 38 individual embeddings across 3 identities from 'data/face_embeddings/student_embeddings.pkl'.
+2026-10-10 14:04:09  [INFO    ]  modules.face_module — [Face] MTCNN detector initialized.
+2026-10-10 14:04:11  [DEBUG   ]  h5py._conv — Creating converter from 3 to 5
+2026-10-10 14:04:12  [INFO    ]  modules.face_module — [Face] ArcFace model pre-built (cached for sessions).
+2026-10-10 14:04:12  [INFO    ]  main — [Main] FaceModule ready.
+2026-10-10 14:04:24  [DEBUG   ]  torio._extension.utils — Loading FFmpeg6
+2026-10-10 14:04:24  [DEBUG   ]  torio._extension.utils — Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torch\_ops.py", line 1392, in load_library
+    ctypes.CDLL(path)
+  File "C:\Program Files\Python310\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\lib\libtorio_ffmpeg6.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2026-10-10 14:04:24  [DEBUG   ]  torio._extension.utils — Loading FFmpeg5
+2026-10-10 14:04:24  [DEBUG   ]  torio._extension.utils — Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torch\_ops.py", line 1392, in load_library
+    ctypes.CDLL(path)
+  File "C:\Program Files\Python310\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\lib\libtorio_ffmpeg5.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2026-10-10 14:04:24  [DEBUG   ]  torio._extension.utils — Loading FFmpeg4
+2026-10-10 14:04:24  [DEBUG   ]  torio._extension.utils — Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torch\_ops.py", line 1392, in load_library
+    ctypes.CDLL(path)
+  File "C:\Program Files\Python310\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\lib\libtorio_ffmpeg4.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2026-10-10 14:04:24  [DEBUG   ]  torio._extension.utils — Loading FFmpeg
+2026-10-10 14:04:24  [DEBUG   ]  torio._extension.utils — Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2026-10-10 14:04:25  [INFO    ]  speechbrain.utils.quirks — Applied quirks (see `speechbrain.utils.quirks`): [allow_tf32, disable_jit_profiling]
+2026-10-10 14:04:25  [INFO    ]  speechbrain.utils.quirks — Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2026-10-10 14:04:25  [INFO    ]  modules.voice_module — [Voice] Loading ECAPA-TDNN on cpu...
+2026-10-10 14:04:25  [INFO    ]  speechbrain.utils.fetching — Fetch hyperparams.yaml: Using file found at 'C:\Users\User\Desktop\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\hyperparams.yaml'
+2026-10-10 14:04:26  [INFO    ]  speechbrain.utils.fetching — Fetch embedding_model.ckpt: Using file found at 'C:\Users\User\Desktop\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\embedding_model.ckpt'
+2026-10-10 14:04:26  [INFO    ]  speechbrain.utils.fetching — Fetch mean_var_norm_emb.ckpt: Using file found at 'C:\Users\User\Desktop\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\mean_var_norm_emb.ckpt'
+2026-10-10 14:04:26  [INFO    ]  speechbrain.utils.fetching — Fetch classifier.ckpt: Using file found at 'C:\Users\User\Desktop\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\classifier.ckpt'
+2026-10-10 14:04:26  [INFO    ]  speechbrain.utils.fetching — Fetch label_encoder.txt: Using file found at 'C:\Users\User\Desktop\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\label_encoder.ckpt'
+2026-10-10 14:04:26  [INFO    ]  speechbrain.utils.parameter_transfer — Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2026-10-10 14:04:26  [INFO    ]  modules.voice_module — [Voice] Model loaded.
+2026-10-10 14:04:26  [INFO    ]  modules.voice_module — [Voice] Loaded 3 speaker(s) from 'data/voice_dataset/voice_embedding_db.pkl'.
+2026-10-10 14:04:26  [DEBUG   ]  modules.voice_module — [Voice]   2217010: 10 embedding(s), dims=[192]
+2026-10-10 14:04:26  [DEBUG   ]  modules.voice_module — [Voice]   2317009: 10 embedding(s), dims=[192]
+2026-10-10 14:04:26  [DEBUG   ]  modules.voice_module — [Voice]   2317046: 10 embedding(s), dims=[192]
+2026-10-10 14:04:26  [INFO    ]  main — [Main] VoiceModule ready.
+2026-10-10 14:04:26  [DEBUG   ]  modules.lip_module — [Lip] SpeechBrain LazyModule patched.
+2026-10-10 14:04:26  [WARNING ]  modules.lip_module — [Lip] CUDA not available — falling back to CPU.
+2026-10-10 14:04:26  [INFO    ]  modules.lip_module — [Lip] Loading VSR model from 'data/lip_weights/vsr_trlrs2lrs3vox2avsp_base.pth' on cpu...
+2026-10-10 14:04:28  [INFO    ]  speechbrain.integrations.numba.transducer_loss — Numba verbose is deactivated. To enable it, set NUMBA_VERBOSE to 1.
+2026-10-10 14:04:49  [INFO    ]  modules.lip_module — [Lip] VSR model loaded.
+2026-10-10 14:04:49  [INFO    ]  main — [Main] LipModule ready.
+2026-10-10 14:37:06  [INFO    ]  root — Logger initialized. Log file: logs/auth_2026-10-10.log
+2026-10-10 14:37:06  [INFO    ]  core.config_loader — Config loaded successfully.
+2026-10-10 14:37:06  [INFO    ]  core.config_loader — Active modules: ['face', 'voice', 'lip']
+2026-10-10 14:37:06  [INFO    ]  root — Logger initialized. Log file: logs/auth_2026-10-10.log
+2026-10-10 14:37:06  [INFO    ]  werkzeug — [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-10-10 14:37:06  [INFO    ]  werkzeug — [33mPress CTRL+C to quit[0m
+2026-10-10 14:37:10  [DEBUG   ]  tensorflow — Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2026-10-10 14:37:11  [DEBUG   ]  h5py._conv — Creating converter from 7 to 5
+2026-10-10 14:37:11  [DEBUG   ]  h5py._conv — Creating converter from 5 to 7
+2026-10-10 14:37:11  [DEBUG   ]  h5py._conv — Creating converter from 7 to 5
+2026-10-10 14:37:11  [DEBUG   ]  h5py._conv — Creating converter from 5 to 7
+2026-10-10 14:37:16  [DEBUG   ]  matplotlib — matplotlib data path: C:\Program Files\Python310\lib\site-packages\matplotlib\mpl-data
+2026-10-10 14:37:16  [DEBUG   ]  matplotlib — CONFIGDIR=C:\Users\User\.matplotlib
+2026-10-10 14:37:16  [DEBUG   ]  matplotlib — interactive is False
+2026-10-10 14:37:16  [DEBUG   ]  matplotlib — platform is win32
+2026-10-10 14:37:17  [DEBUG   ]  matplotlib — CACHEDIR=C:\Users\User\.matplotlib
+2026-10-10 14:37:17  [DEBUG   ]  matplotlib.font_manager — Using fontManager instance from C:\Users\User\.matplotlib\fontlist-v390.json
+2026-10-10 14:37:19  [INFO    ]  modules.face_module — [Face] Loaded 38 individual embeddings across 3 identities from 'data/face_embeddings/student_embeddings.pkl'.
+2026-10-10 14:37:19  [INFO    ]  modules.face_module — [Face] MTCNN detector initialized.
+2026-10-10 14:37:22  [DEBUG   ]  h5py._conv — Creating converter from 3 to 5
+2026-10-10 14:37:22  [INFO    ]  modules.face_module — [Face] ArcFace model pre-built (cached for sessions).
+2026-10-10 14:37:22  [INFO    ]  main — [Main] FaceModule ready.
+2026-10-10 14:37:28  [DEBUG   ]  torio._extension.utils — Loading FFmpeg6
+2026-10-10 14:37:28  [DEBUG   ]  torio._extension.utils — Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torch\_ops.py", line 1392, in load_library
+    ctypes.CDLL(path)
+  File "C:\Program Files\Python310\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\lib\libtorio_ffmpeg6.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2026-10-10 14:37:28  [DEBUG   ]  torio._extension.utils — Loading FFmpeg5
+2026-10-10 14:37:28  [DEBUG   ]  torio._extension.utils — Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torch\_ops.py", line 1392, in load_library
+    ctypes.CDLL(path)
+  File "C:\Program Files\Python310\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\lib\libtorio_ffmpeg5.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2026-10-10 14:37:28  [DEBUG   ]  torio._extension.utils — Loading FFmpeg4
+2026-10-10 14:37:28  [DEBUG   ]  torio._extension.utils — Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torch\_ops.py", line 1392, in load_library
+    ctypes.CDLL(path)
+  File "C:\Program Files\Python310\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\lib\libtorio_ffmpeg4.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2026-10-10 14:37:28  [DEBUG   ]  torio._extension.utils — Loading FFmpeg
+2026-10-10 14:37:28  [DEBUG   ]  torio._extension.utils — Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2026-10-10 14:37:29  [INFO    ]  speechbrain.utils.quirks — Applied quirks (see `speechbrain.utils.quirks`): [disable_jit_profiling, allow_tf32]
+2026-10-10 14:37:29  [INFO    ]  speechbrain.utils.quirks — Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2026-10-10 14:37:29  [INFO    ]  modules.voice_module — [Voice] Loading ECAPA-TDNN on cpu...
+2026-10-10 14:37:29  [INFO    ]  speechbrain.utils.fetching — Fetch hyperparams.yaml: Using file found at 'C:\Users\User\Desktop\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\hyperparams.yaml'
+2026-10-10 14:37:29  [INFO    ]  speechbrain.utils.fetching — Fetch embedding_model.ckpt: Using file found at 'C:\Users\User\Desktop\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\embedding_model.ckpt'
+2026-10-10 14:37:29  [INFO    ]  speechbrain.utils.fetching — Fetch mean_var_norm_emb.ckpt: Using file found at 'C:\Users\User\Desktop\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\mean_var_norm_emb.ckpt'
+2026-10-10 14:37:29  [INFO    ]  speechbrain.utils.fetching — Fetch classifier.ckpt: Using file found at 'C:\Users\User\Desktop\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\classifier.ckpt'
+2026-10-10 14:37:29  [INFO    ]  speechbrain.utils.fetching — Fetch label_encoder.txt: Using file found at 'C:\Users\User\Desktop\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\label_encoder.ckpt'
+2026-10-10 14:37:29  [INFO    ]  speechbrain.utils.parameter_transfer — Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2026-10-10 14:37:30  [INFO    ]  modules.voice_module — [Voice] Model loaded.
+2026-10-10 14:37:30  [INFO    ]  modules.voice_module — [Voice] Loaded 3 speaker(s) from 'data/voice_dataset/voice_embedding_db.pkl'.
+2026-10-10 14:37:30  [DEBUG   ]  modules.voice_module — [Voice]   2217010: 10 embedding(s), dims=[192]
+2026-10-10 14:37:30  [DEBUG   ]  modules.voice_module — [Voice]   2317009: 10 embedding(s), dims=[192]
+2026-10-10 14:37:30  [DEBUG   ]  modules.voice_module — [Voice]   2317046: 10 embedding(s), dims=[192]
+2026-10-10 14:37:30  [INFO    ]  main — [Main] VoiceModule ready.
+2026-10-10 14:37:30  [DEBUG   ]  modules.lip_module — [Lip] SpeechBrain LazyModule patched.
+2026-10-10 14:37:30  [WARNING ]  modules.lip_module — [Lip] CUDA not available — falling back to CPU.
+2026-10-10 14:37:30  [INFO    ]  modules.lip_module — [Lip] Loading VSR model from 'data/lip_weights/vsr_trlrs2lrs3vox2avsp_base.pth' on cpu...
+2026-10-10 14:37:31  [INFO    ]  speechbrain.integrations.numba.transducer_loss — Numba verbose is deactivated. To enable it, set NUMBA_VERBOSE to 1.
+2026-10-10 14:37:43  [INFO    ]  modules.lip_module — [Lip] VSR model loaded.
+2026-10-10 14:37:43  [INFO    ]  main — [Main] LipModule ready.
+2026-10-10 14:39:59  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 14:39:59] "[36mGET / HTTP/1.1[0m" 304 -
+2026-10-10 14:40:00  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 14:40:00] "GET /api/preview.mjpg HTTP/1.1" 200 -
+2026-10-10 14:40:00  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 14:40:00] "GET /api/status HTTP/1.1" 200 -
+2026-10-10 14:40:00  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 14:40:00] "GET /api/events HTTP/1.1" 200 -
+2026-10-10 14:40:00  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 14:40:00] "GET /api/preview.mjpg?t=1791623400677 HTTP/1.1" 200 -
+2026-10-10 14:40:00  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 14:40:00] "GET /api/preview.mjpg?t=1791623400679 HTTP/1.1" 200 -
+2026-10-10 14:59:19  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 14:59:19] "[36mGET / HTTP/1.1[0m" 304 -
+2026-10-10 14:59:19  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 14:59:19] "GET /api/preview.mjpg HTTP/1.1" 200 -
+2026-10-10 14:59:19  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 14:59:19] "GET /api/status HTTP/1.1" 200 -
+2026-10-10 14:59:19  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 14:59:19] "GET /api/events HTTP/1.1" 200 -
+2026-10-10 14:59:19  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 14:59:19] "GET /api/preview.mjpg?t=1791624559983 HTTP/1.1" 200 -
+2026-10-10 14:59:20  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 14:59:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-10-10 15:00:46  [INFO    ]  root — Logger initialized. Log file: logs/auth_2026-10-10.log
+2026-10-10 15:00:46  [INFO    ]  core.config_loader — Config loaded successfully.
+2026-10-10 15:00:46  [INFO    ]  core.config_loader — Active modules: ['face', 'voice', 'lip']
+2026-10-10 15:00:46  [INFO    ]  root — Logger initialized. Log file: logs/auth_2026-10-10.log
+2026-10-10 15:00:46  [INFO    ]  werkzeug — [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-10-10 15:00:46  [INFO    ]  werkzeug — [33mPress CTRL+C to quit[0m
+2026-10-10 15:00:49  [DEBUG   ]  tensorflow — Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2026-10-10 15:00:50  [DEBUG   ]  h5py._conv — Creating converter from 7 to 5
+2026-10-10 15:00:50  [DEBUG   ]  h5py._conv — Creating converter from 5 to 7
+2026-10-10 15:00:50  [DEBUG   ]  h5py._conv — Creating converter from 7 to 5
+2026-10-10 15:00:50  [DEBUG   ]  h5py._conv — Creating converter from 5 to 7
+2026-10-10 15:00:55  [DEBUG   ]  matplotlib — matplotlib data path: C:\Program Files\Python310\lib\site-packages\matplotlib\mpl-data
+2026-10-10 15:00:55  [DEBUG   ]  matplotlib — CONFIGDIR=C:\Users\User\.matplotlib
+2026-10-10 15:00:55  [DEBUG   ]  matplotlib — interactive is False
+2026-10-10 15:00:55  [DEBUG   ]  matplotlib — platform is win32
+2026-10-10 15:00:55  [DEBUG   ]  matplotlib — CACHEDIR=C:\Users\User\.matplotlib
+2026-10-10 15:00:55  [DEBUG   ]  matplotlib.font_manager — Using fontManager instance from C:\Users\User\.matplotlib\fontlist-v390.json
+2026-10-10 15:00:58  [INFO    ]  modules.face_module — [Face] Loaded 38 individual embeddings across 3 identities from 'data/face_embeddings/student_embeddings.pkl'.
+2026-10-10 15:00:58  [INFO    ]  modules.face_module — [Face] MTCNN detector initialized.
+2026-10-10 15:01:01  [DEBUG   ]  h5py._conv — Creating converter from 3 to 5
+2026-10-10 15:01:02  [INFO    ]  modules.face_module — [Face] ArcFace model pre-built (cached for sessions).
+2026-10-10 15:01:02  [INFO    ]  main — [Main] FaceModule ready.
+2026-10-10 15:01:05  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:01:05] "[36mGET / HTTP/1.1[0m" 304 -
+2026-10-10 15:01:05  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:01:05] "GET /api/preview.mjpg HTTP/1.1" 200 -
+2026-10-10 15:01:05  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:01:05] "GET /api/status HTTP/1.1" 200 -
+2026-10-10 15:01:05  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:01:05] "GET /api/events HTTP/1.1" 200 -
+2026-10-10 15:01:14  [DEBUG   ]  torio._extension.utils — Loading FFmpeg6
+2026-10-10 15:01:14  [DEBUG   ]  torio._extension.utils — Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torch\_ops.py", line 1392, in load_library
+    ctypes.CDLL(path)
+  File "C:\Program Files\Python310\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\lib\libtorio_ffmpeg6.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2026-10-10 15:01:14  [DEBUG   ]  torio._extension.utils — Loading FFmpeg5
+2026-10-10 15:01:14  [DEBUG   ]  torio._extension.utils — Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torch\_ops.py", line 1392, in load_library
+    ctypes.CDLL(path)
+  File "C:\Program Files\Python310\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\lib\libtorio_ffmpeg5.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2026-10-10 15:01:14  [DEBUG   ]  torio._extension.utils — Loading FFmpeg4
+2026-10-10 15:01:14  [DEBUG   ]  torio._extension.utils — Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torch\_ops.py", line 1392, in load_library
+    ctypes.CDLL(path)
+  File "C:\Program Files\Python310\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\lib\libtorio_ffmpeg4.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2026-10-10 15:01:14  [DEBUG   ]  torio._extension.utils — Loading FFmpeg
+2026-10-10 15:01:14  [DEBUG   ]  torio._extension.utils — Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2026-10-10 15:01:15  [INFO    ]  speechbrain.utils.quirks — Applied quirks (see `speechbrain.utils.quirks`): [disable_jit_profiling, allow_tf32]
+2026-10-10 15:01:15  [INFO    ]  speechbrain.utils.quirks — Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2026-10-10 15:01:15  [INFO    ]  modules.voice_module — [Voice] Loading ECAPA-TDNN on cpu...
+2026-10-10 15:01:15  [INFO    ]  speechbrain.utils.fetching — Fetch hyperparams.yaml: Using file found at 'C:\Users\User\Desktop\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\hyperparams.yaml'
+2026-10-10 15:01:16  [INFO    ]  speechbrain.utils.fetching — Fetch embedding_model.ckpt: Using file found at 'C:\Users\User\Desktop\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\embedding_model.ckpt'
+2026-10-10 15:01:16  [INFO    ]  speechbrain.utils.fetching — Fetch mean_var_norm_emb.ckpt: Using file found at 'C:\Users\User\Desktop\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\mean_var_norm_emb.ckpt'
+2026-10-10 15:01:16  [INFO    ]  speechbrain.utils.fetching — Fetch classifier.ckpt: Using file found at 'C:\Users\User\Desktop\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\classifier.ckpt'
+2026-10-10 15:01:16  [INFO    ]  speechbrain.utils.fetching — Fetch label_encoder.txt: Using file found at 'C:\Users\User\Desktop\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\label_encoder.ckpt'
+2026-10-10 15:01:16  [INFO    ]  speechbrain.utils.parameter_transfer — Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2026-10-10 15:01:16  [INFO    ]  modules.voice_module — [Voice] Model loaded.
+2026-10-10 15:01:16  [INFO    ]  modules.voice_module — [Voice] Loaded 3 speaker(s) from 'data/voice_dataset/voice_embedding_db.pkl'.
+2026-10-10 15:01:16  [DEBUG   ]  modules.voice_module — [Voice]   2217010: 10 embedding(s), dims=[192]
+2026-10-10 15:01:16  [DEBUG   ]  modules.voice_module — [Voice]   2317009: 10 embedding(s), dims=[192]
+2026-10-10 15:01:16  [DEBUG   ]  modules.voice_module — [Voice]   2317046: 10 embedding(s), dims=[192]
+2026-10-10 15:01:16  [INFO    ]  main — [Main] VoiceModule ready.
+2026-10-10 15:01:16  [DEBUG   ]  modules.lip_module — [Lip] SpeechBrain LazyModule patched.
+2026-10-10 15:01:16  [WARNING ]  modules.lip_module — [Lip] CUDA not available — falling back to CPU.
+2026-10-10 15:01:16  [INFO    ]  modules.lip_module — [Lip] Loading VSR model from 'data/lip_weights/vsr_trlrs2lrs3vox2avsp_base.pth' on cpu...
+2026-10-10 15:01:17  [INFO    ]  speechbrain.integrations.numba.transducer_loss — Numba verbose is deactivated. To enable it, set NUMBA_VERBOSE to 1.
+2026-10-10 15:01:34  [INFO    ]  modules.lip_module — [Lip] VSR model loaded.
+2026-10-10 15:01:34  [INFO    ]  main — [Main] LipModule ready.
+2026-10-10 15:01:34  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:01:34] "GET /api/preview.mjpg?t=1791624694925 HTTP/1.1" 200 -
+2026-10-10 15:21:21  [INFO    ]  root — Logger initialized. Log file: logs/auth_2026-10-10.log
+2026-10-10 15:21:21  [INFO    ]  core.config_loader — Config loaded successfully.
+2026-10-10 15:21:21  [INFO    ]  core.config_loader — Active modules: ['face', 'voice', 'lip']
+2026-10-10 15:21:21  [INFO    ]  root — Logger initialized. Log file: logs/auth_2026-10-10.log
+2026-10-10 15:21:21  [INFO    ]  werkzeug — [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-10-10 15:21:21  [INFO    ]  werkzeug — [33mPress CTRL+C to quit[0m
+2026-10-10 15:21:24  [DEBUG   ]  tensorflow — Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2026-10-10 15:21:26  [DEBUG   ]  h5py._conv — Creating converter from 7 to 5
+2026-10-10 15:21:26  [DEBUG   ]  h5py._conv — Creating converter from 5 to 7
+2026-10-10 15:21:26  [DEBUG   ]  h5py._conv — Creating converter from 7 to 5
+2026-10-10 15:21:26  [DEBUG   ]  h5py._conv — Creating converter from 5 to 7
+2026-10-10 15:21:30  [DEBUG   ]  matplotlib — matplotlib data path: C:\Program Files\Python310\lib\site-packages\matplotlib\mpl-data
+2026-10-10 15:21:30  [DEBUG   ]  matplotlib — CONFIGDIR=C:\Users\User\.matplotlib
+2026-10-10 15:21:30  [DEBUG   ]  matplotlib — interactive is False
+2026-10-10 15:21:30  [DEBUG   ]  matplotlib — platform is win32
+2026-10-10 15:21:30  [DEBUG   ]  matplotlib — CACHEDIR=C:\Users\User\.matplotlib
+2026-10-10 15:21:31  [DEBUG   ]  matplotlib.font_manager — Using fontManager instance from C:\Users\User\.matplotlib\fontlist-v390.json
+2026-10-10 15:21:33  [INFO    ]  modules.face_module — [Face] Loaded 38 individual embeddings across 3 identities from 'data/face_embeddings/student_embeddings.pkl'.
+2026-10-10 15:21:34  [INFO    ]  modules.face_module — [Face] MTCNN detector initialized.
+2026-10-10 15:21:36  [DEBUG   ]  h5py._conv — Creating converter from 3 to 5
+2026-10-10 15:21:37  [INFO    ]  modules.face_module — [Face] ArcFace model pre-built (cached for sessions).
+2026-10-10 15:21:37  [INFO    ]  main — [Main] FaceModule ready.
+2026-10-10 15:21:43  [DEBUG   ]  torio._extension.utils — Loading FFmpeg6
+2026-10-10 15:21:43  [DEBUG   ]  torio._extension.utils — Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torch\_ops.py", line 1392, in load_library
+    ctypes.CDLL(path)
+  File "C:\Program Files\Python310\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\lib\libtorio_ffmpeg6.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2026-10-10 15:21:43  [DEBUG   ]  torio._extension.utils — Loading FFmpeg5
+2026-10-10 15:21:43  [DEBUG   ]  torio._extension.utils — Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torch\_ops.py", line 1392, in load_library
+    ctypes.CDLL(path)
+  File "C:\Program Files\Python310\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\lib\libtorio_ffmpeg5.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2026-10-10 15:21:43  [DEBUG   ]  torio._extension.utils — Loading FFmpeg4
+2026-10-10 15:21:43  [DEBUG   ]  torio._extension.utils — Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torch\_ops.py", line 1392, in load_library
+    ctypes.CDLL(path)
+  File "C:\Program Files\Python310\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\lib\libtorio_ffmpeg4.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2026-10-10 15:21:43  [DEBUG   ]  torio._extension.utils — Loading FFmpeg
+2026-10-10 15:21:43  [DEBUG   ]  torio._extension.utils — Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2026-10-10 15:21:44  [INFO    ]  speechbrain.utils.quirks — Applied quirks (see `speechbrain.utils.quirks`): [disable_jit_profiling, allow_tf32]
+2026-10-10 15:21:44  [INFO    ]  speechbrain.utils.quirks — Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2026-10-10 15:21:44  [INFO    ]  modules.voice_module — [Voice] Loading ECAPA-TDNN on cpu...
+2026-10-10 15:21:44  [INFO    ]  speechbrain.utils.fetching — Fetch hyperparams.yaml: Using file found at 'C:\Users\User\Desktop\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\hyperparams.yaml'
+2026-10-10 15:21:44  [INFO    ]  speechbrain.utils.fetching — Fetch embedding_model.ckpt: Using file found at 'C:\Users\User\Desktop\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\embedding_model.ckpt'
+2026-10-10 15:21:44  [INFO    ]  speechbrain.utils.fetching — Fetch mean_var_norm_emb.ckpt: Using file found at 'C:\Users\User\Desktop\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\mean_var_norm_emb.ckpt'
+2026-10-10 15:21:44  [INFO    ]  speechbrain.utils.fetching — Fetch classifier.ckpt: Using file found at 'C:\Users\User\Desktop\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\classifier.ckpt'
+2026-10-10 15:21:44  [INFO    ]  speechbrain.utils.fetching — Fetch label_encoder.txt: Using file found at 'C:\Users\User\Desktop\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\label_encoder.ckpt'
+2026-10-10 15:21:44  [INFO    ]  speechbrain.utils.parameter_transfer — Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2026-10-10 15:21:45  [INFO    ]  modules.voice_module — [Voice] Model loaded.
+2026-10-10 15:21:45  [INFO    ]  modules.voice_module — [Voice] Loaded 3 speaker(s) from 'data/voice_dataset/voice_embedding_db.pkl'.
+2026-10-10 15:21:45  [DEBUG   ]  modules.voice_module — [Voice]   2217010: 10 embedding(s), dims=[192]
+2026-10-10 15:21:45  [DEBUG   ]  modules.voice_module — [Voice]   2317009: 10 embedding(s), dims=[192]
+2026-10-10 15:21:45  [DEBUG   ]  modules.voice_module — [Voice]   2317046: 10 embedding(s), dims=[192]
+2026-10-10 15:21:45  [INFO    ]  main — [Main] VoiceModule ready.
+2026-10-10 15:21:45  [DEBUG   ]  modules.lip_module — [Lip] SpeechBrain LazyModule patched.
+2026-10-10 15:21:45  [WARNING ]  modules.lip_module — [Lip] CUDA not available — falling back to CPU.
+2026-10-10 15:21:45  [INFO    ]  modules.lip_module — [Lip] Loading VSR model from 'data/lip_weights/vsr_trlrs2lrs3vox2avsp_base.pth' on cpu...
+2026-10-10 15:21:46  [INFO    ]  speechbrain.integrations.numba.transducer_loss — Numba verbose is deactivated. To enable it, set NUMBA_VERBOSE to 1.
+2026-10-10 15:21:59  [INFO    ]  modules.lip_module — [Lip] VSR model loaded.
+2026-10-10 15:21:59  [INFO    ]  main — [Main] LipModule ready.
+2026-10-10 15:26:16  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:26:16] "[36mGET / HTTP/1.1[0m" 304 -
+2026-10-10 15:26:16  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:26:16] "GET /api/preview.mjpg HTTP/1.1" 200 -
+2026-10-10 15:26:16  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:26:16] "GET /api/status HTTP/1.1" 200 -
+2026-10-10 15:26:16  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:26:16] "GET /api/events HTTP/1.1" 200 -
+2026-10-10 15:26:16  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:26:16] "GET /api/preview.mjpg?t=1791626176576 HTTP/1.1" 200 -
+2026-10-10 15:26:16  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:26:16] "GET /api/preview.mjpg?t=1791626176577 HTTP/1.1" 200 -
+2026-10-10 15:31:27  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:31:27] "[36mGET / HTTP/1.1[0m" 304 -
+2026-10-10 15:31:27  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:31:27] "GET /api/preview.mjpg HTTP/1.1" 200 -
+2026-10-10 15:31:28  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:31:28] "GET /api/status HTTP/1.1" 200 -
+2026-10-10 15:31:28  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:31:28] "GET /api/events HTTP/1.1" 200 -
+2026-10-10 15:31:28  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:31:28] "GET /api/preview.mjpg?t=1791626488152 HTTP/1.1" 200 -
+2026-10-10 15:32:30  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:32:30] "POST /api/start HTTP/1.1" 200 -
+2026-10-10 15:32:34  [INFO    ]  core.capture_session — [Capture] Sentence chosen: 'Verify my access immediately please' | Recording for 4s
+2026-10-10 15:32:35  [INFO    ]  core.capture_session — [Capture] Using MTCNN for capture-time face counting.
+2026-10-10 15:32:39  [DEBUG   ]  core.capture_session — [Capture] Audio saved to 'C:\Users\User\AppData\Local\Temp\tmplb1j3jjz_challenge.wav'.
+2026-10-10 15:32:47  [INFO    ]  core.orchestrator — ============================================================
+2026-10-10 15:32:47  [INFO    ]  core.orchestrator — Authentication session started.
+2026-10-10 15:32:47  [INFO    ]  core.orchestrator — Active modules: ['face', 'voice', 'lip']
+2026-10-10 15:32:47  [DEBUG   ]  core.orchestrator — [voice] Starting module execution...
+2026-10-10 15:32:47  [DEBUG   ]  core.orchestrator — [lip] Starting module execution...
+2026-10-10 15:32:47  [DEBUG   ]  core.orchestrator — [face] Starting module execution...
+2026-10-10 15:32:47  [INFO    ]  modules.voice_module — [Voice] Verifying input: 'C:\Users\User\AppData\Local\Temp\tmplb1j3jjz_challenge.wav'
+2026-10-10 15:32:47  [INFO    ]  modules.lip_module — [Lip] Running VSR inference | video='C:\Users\User\AppData\Local\Temp\tmpdzvmyqbn_challenge.avi' | expected='Verify my access immediately please'
+2026-10-10 15:32:47  [INFO    ]  modules.face_module — [Face] Processing 20 tracking frame(s).
+2026-10-10 15:32:49  [INFO    ]  modules.voice_module — [Voice] Best match: '2217010' | score=0.5554 | threshold=0.35 | passed=True
+2026-10-10 15:32:49  [INFO    ]  modules.voice_module — [Voice] Top matches: [{'rank': 1, 'speaker': '2217010', 'score': 0.5554}, {'rank': 2, 'speaker': '2317009', 'score': 0.193}, {'rank': 3, 'speaker': '2317046', 'score': 0.0997}]
+2026-10-10 15:32:49  [DEBUG   ]  core.orchestrator — [voice] Module execution complete.
+2026-10-10 15:32:49  [INFO    ]  core.orchestrator — [VOICE] PASS | Score: 0.5554 | Weighted: 0.1944 | Identity: 2217010
+2026-10-10 15:32:58  [DEBUG   ]  modules.face_module — [Face] Frame 15: no face detected.
+2026-10-10 15:32:58  [DEBUG   ]  core.orchestrator — [face] Module execution complete.
+2026-10-10 15:32:58  [INFO    ]  core.orchestrator — [FACE] PASS | Score: 0.8605 | Weighted: 0.3442 | Identity: 2217010
+2026-10-10 15:33:00  [DEBUG   ]  root — decoder input length: 100
+2026-10-10 15:33:00  [DEBUG   ]  root — max output length: 100
+2026-10-10 15:33:00  [DEBUG   ]  root — min output length: 0
+2026-10-10 15:33:00  [DEBUG   ]  root — position 0
+2026-10-10 15:33:00  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:33:00  [DEBUG   ]  root — best hypo: ▁ACCESS
+2026-10-10 15:33:00  [DEBUG   ]  root — remained hypotheses: 40
+2026-10-10 15:33:00  [DEBUG   ]  root — position 1
+2026-10-10 15:33:01  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:33:01  [DEBUG   ]  root — best hypo: ▁ACCESS▁TO
+2026-10-10 15:33:01  [DEBUG   ]  root — remained hypotheses: 40
+2026-10-10 15:33:01  [DEBUG   ]  root — position 2
+2026-10-10 15:33:03  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:33:03  [DEBUG   ]  root — best hypo: ▁ACCESS▁TO▁PEACE
+2026-10-10 15:33:03  [DEBUG   ]  root — remained hypotheses: 40
+2026-10-10 15:33:03  [DEBUG   ]  root — position 3
+2026-10-10 15:33:04  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:33:04  [DEBUG   ]  root — best hypo: ▁ACCESS▁TO▁PEACE<eos>
+2026-10-10 15:33:04  [DEBUG   ]  root — remained hypotheses: 33
+2026-10-10 15:33:04  [DEBUG   ]  root — position 4
+2026-10-10 15:33:05  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:33:05  [DEBUG   ]  root — best hypo: ▁ACCESS▁TO▁PIZZA
+2026-10-10 15:33:05  [DEBUG   ]  root — remained hypotheses: 35
+2026-10-10 15:33:05  [DEBUG   ]  root — position 5
+2026-10-10 15:33:06  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:33:06  [DEBUG   ]  root — best hypo: ▁ACCESS▁TO▁PEACE▁THAT'S
+2026-10-10 15:33:06  [DEBUG   ]  root — remained hypotheses: 36
+2026-10-10 15:33:06  [DEBUG   ]  root — position 6
+2026-10-10 15:33:07  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:33:07  [DEBUG   ]  root — best hypo: ▁ACCESS▁TO▁PEACE▁SO▁IT'S
+2026-10-10 15:33:07  [DEBUG   ]  root — remained hypotheses: 37
+2026-10-10 15:33:07  [DEBUG   ]  root — position 7
+2026-10-10 15:33:09  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:33:09  [DEBUG   ]  root — best hypo: ▁EXITS▁THE▁PIZZA<eos>
+2026-10-10 15:33:09  [DEBUG   ]  root — remained hypotheses: 37
+2026-10-10 15:33:09  [DEBUG   ]  root — position 8
+2026-10-10 15:33:10  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:33:10  [DEBUG   ]  root — best hypo: ▁ACCESS▁TO▁PEACE▁SO▁WE'RE▁GOING▁TO
+2026-10-10 15:33:10  [DEBUG   ]  root — remained hypotheses: 40
+2026-10-10 15:33:10  [DEBUG   ]  root — position 9
+2026-10-10 15:33:11  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:33:11  [DEBUG   ]  root — best hypo: ▁ACCESS▁TO▁PEACE▁THAT'S▁WHAT▁I'M
+2026-10-10 15:33:11  [DEBUG   ]  root — remained hypotheses: 38
+2026-10-10 15:33:11  [DEBUG   ]  root — position 10
+2026-10-10 15:33:12  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:33:12  [DEBUG   ]  root — best hypo: ▁ACCESS▁TO▁PEACE▁THAT'S▁WHAT▁I'M▁SAYING
+2026-10-10 15:33:12  [DEBUG   ]  root — remained hypotheses: 39
+2026-10-10 15:33:12  [DEBUG   ]  root — position 11
+2026-10-10 15:33:14  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:33:14  [DEBUG   ]  root — best hypo: ▁ACCESS▁TO▁PEACE▁THAT'S▁WHAT▁WE'RE▁GOING▁TO
+2026-10-10 15:33:14  [DEBUG   ]  root — remained hypotheses: 33
+2026-10-10 15:33:14  [DEBUG   ]  root — position 12
+2026-10-10 15:33:15  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:33:15  [DEBUG   ]  root — best hypo: ▁ACCESS▁TO▁PEACE▁THAT'S▁WHAT▁I'M▁TALKING▁ABOUT<eos>
+2026-10-10 15:33:15  [DEBUG   ]  root — remained hypotheses: 27
+2026-10-10 15:33:15  [DEBUG   ]  root — position 13
+2026-10-10 15:33:16  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:33:16  [DEBUG   ]  root — best hypo: ▁ACCESS▁TO▁PEACE▁THAT'S▁WHAT▁WE'RE▁GOING▁TO▁DO<eos>
+2026-10-10 15:33:16  [DEBUG   ]  root — end detected at 13
+2026-10-10 15:33:16  [DEBUG   ]  root —  -1.85 * 0.9 =  -1.66 for decoder
+2026-10-10 15:33:16  [DEBUG   ]  root —  -9.40 * 0.1 =  -0.94 for ctc
+2026-10-10 15:33:16  [DEBUG   ]  root — total log probability: -2.60
+2026-10-10 15:33:16  [DEBUG   ]  root — normalized log probability: -0.52
+2026-10-10 15:33:16  [DEBUG   ]  root — total number of ended hypotheses: 58
+2026-10-10 15:33:16  [DEBUG   ]  root — best hypo: ▁ACCESS▁TO▁PEACE
+
+2026-10-10 15:33:16  [INFO    ]  modules.lip_module — [Lip] Expected  : 'verify my access immediately please'
+      Transcript: 'access to peace'
+      Similarity : 0.5200 | threshold=0.3 | passed=True
+2026-10-10 15:33:16  [DEBUG   ]  core.orchestrator — [lip] Module execution complete.
+2026-10-10 15:33:16  [INFO    ]  core.orchestrator — [LIP] PASS | Score: 0.5200 | Weighted: 0.1300 | Identity: liveness_verified
+2026-10-10 15:33:16  [INFO    ]  core.orchestrator — 
+============================================================
+  AUTHENTICATION RESULT - 2026-10-10 15:33:16
+============================================================
+  [VOICE ]  PASS  [######....]  score=0.555  weighted=0.194  id=2217010
+  [FACE  ]  PASS  [#########.]  score=0.861  weighted=0.344  id=2217010
+  [LIP   ]  PASS  [#####.....]  score=0.520  weighted=0.130  id=liveness_verified
+------------------------------------------------------------
+  Final Score   : 0.6686  (threshold: 0.6)
+  Liveness OK   : True
+  Identity      : 2217010
+  AUTHENTICATED
+============================================================
+
+2026-10-10 15:33:16  [DEBUG   ]  core.capture_session — [Capture] Cleaned up temp file: C:\Users\User\AppData\Local\Temp\tmpdzvmyqbn_challenge.avi
+2026-10-10 15:33:16  [DEBUG   ]  core.capture_session — [Capture] Cleaned up temp file: C:\Users\User\AppData\Local\Temp\tmplb1j3jjz_challenge.wav
+2026-10-10 15:33:16  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:33:16] "GET /api/snapshot.jpg?t=1791626596380 HTTP/1.1" 200 -
+2026-10-10 15:33:16  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:33:16] "GET /api/preview.mjpg?t=1791626596381 HTTP/1.1" 200 -
+2026-10-10 15:33:16  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:33:16] "GET /api/preview.mjpg?t=1791626596531 HTTP/1.1" 200 -
+2026-10-10 15:36:08  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:36:08] "POST /api/start HTTP/1.1" 200 -
+2026-10-10 15:36:12  [INFO    ]  core.capture_session — [Capture] Sentence chosen: 'Hello Triguard, approve my request' | Recording for 4s
+2026-10-10 15:36:13  [INFO    ]  core.capture_session — [Capture] Using MTCNN for capture-time face counting.
+2026-10-10 15:36:16  [DEBUG   ]  core.capture_session — [Capture] Audio saved to 'C:\Users\User\AppData\Local\Temp\tmpec8e17of_challenge.wav'.
+2026-10-10 15:36:24  [INFO    ]  core.orchestrator — ============================================================
+2026-10-10 15:36:24  [INFO    ]  core.orchestrator — Authentication session started.
+2026-10-10 15:36:24  [INFO    ]  core.orchestrator — Active modules: ['face', 'voice', 'lip']
+2026-10-10 15:36:24  [DEBUG   ]  core.orchestrator — [face] Starting module execution...
+2026-10-10 15:36:24  [DEBUG   ]  core.orchestrator — [voice] Starting module execution...
+2026-10-10 15:36:24  [INFO    ]  modules.face_module — [Face] Processing 20 tracking frame(s).
+2026-10-10 15:36:24  [INFO    ]  modules.voice_module — [Voice] Verifying input: 'C:\Users\User\AppData\Local\Temp\tmpec8e17of_challenge.wav'
+2026-10-10 15:36:24  [DEBUG   ]  core.orchestrator — [lip] Starting module execution...
+2026-10-10 15:36:24  [INFO    ]  modules.lip_module — [Lip] Running VSR inference | video='C:\Users\User\AppData\Local\Temp\tmp2k_n3rhj_challenge.avi' | expected='Hello Triguard, approve my request'
+2026-10-10 15:36:25  [WARNING ]  modules.face_module — [Face] Frame 0: 2 faces detected - frame skipped (max allowed: 1).
+2026-10-10 15:36:26  [INFO    ]  modules.voice_module — [Voice] Best match: '2217010' | score=0.1347 | threshold=0.35 | passed=False
+2026-10-10 15:36:26  [INFO    ]  modules.voice_module — [Voice] Top matches: [{'rank': 1, 'speaker': '2217010', 'score': 0.1347}, {'rank': 2, 'speaker': '2317009', 'score': 0.108}, {'rank': 3, 'speaker': '2317046', 'score': 0.0878}]
+2026-10-10 15:36:26  [DEBUG   ]  core.orchestrator — [voice] Module execution complete.
+2026-10-10 15:36:26  [INFO    ]  core.orchestrator — [VOICE] FAIL | Score: 0.1347 | Weighted: 0.0471 | Identity: unknown
+2026-10-10 15:36:27  [DEBUG   ]  core.orchestrator — [face] Module execution complete.
+2026-10-10 15:36:27  [INFO    ]  core.orchestrator — [FACE] PASS | Score: 0.5091 | Weighted: 0.2037 | Identity: 2217010
+2026-10-10 15:36:34  [DEBUG   ]  root — decoder input length: 100
+2026-10-10 15:36:34  [DEBUG   ]  root — max output length: 100
+2026-10-10 15:36:34  [DEBUG   ]  root — min output length: 0
+2026-10-10 15:36:34  [DEBUG   ]  root — position 0
+2026-10-10 15:36:34  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:36:34  [DEBUG   ]  root — best hypo: ▁I
+2026-10-10 15:36:34  [DEBUG   ]  root — remained hypotheses: 40
+2026-10-10 15:36:34  [DEBUG   ]  root — position 1
+2026-10-10 15:36:35  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:36:35  [DEBUG   ]  root — best hypo: ▁I'
+2026-10-10 15:36:35  [DEBUG   ]  root — remained hypotheses: 40
+2026-10-10 15:36:35  [DEBUG   ]  root — position 2
+2026-10-10 15:36:36  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:36:36  [DEBUG   ]  root — best hypo: ▁I'M
+2026-10-10 15:36:36  [DEBUG   ]  root — remained hypotheses: 39
+2026-10-10 15:36:36  [DEBUG   ]  root — position 3
+2026-10-10 15:36:37  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:36:37  [DEBUG   ]  root — best hypo: ▁I▁DON'T
+2026-10-10 15:36:37  [DEBUG   ]  root — remained hypotheses: 40
+2026-10-10 15:36:37  [DEBUG   ]  root — position 4
+2026-10-10 15:36:38  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:36:38  [DEBUG   ]  root — best hypo: ▁YOU▁GOTTA▁MAKE▁A
+2026-10-10 15:36:38  [DEBUG   ]  root — remained hypotheses: 40
+2026-10-10 15:36:38  [DEBUG   ]  root — position 5
+2026-10-10 15:36:39  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:36:39  [DEBUG   ]  root — best hypo: ▁YOU▁GOTTA▁MAKE▁A▁GOOD
+2026-10-10 15:36:39  [DEBUG   ]  root — remained hypotheses: 39
+2026-10-10 15:36:39  [DEBUG   ]  root — position 6
+2026-10-10 15:36:41  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:36:41  [DEBUG   ]  root — best hypo: ▁YOU'VE▁GOT▁TO▁MAKE▁A
+2026-10-10 15:36:41  [DEBUG   ]  root — remained hypotheses: 33
+2026-10-10 15:36:41  [DEBUG   ]  root — position 7
+2026-10-10 15:36:42  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:36:42  [DEBUG   ]  root — best hypo: ▁YOU'VE▁GOT▁TO▁MAKE▁A▁GOOD
+2026-10-10 15:36:42  [DEBUG   ]  root — remained hypotheses: 29
+2026-10-10 15:36:42  [DEBUG   ]  root — position 8
+2026-10-10 15:36:42  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:36:42  [DEBUG   ]  root — best hypo: ▁SO▁YOU'VE▁GOT▁TO▁MAKE▁A▁GOOD
+2026-10-10 15:36:42  [DEBUG   ]  root — remained hypotheses: 27
+2026-10-10 15:36:42  [DEBUG   ]  root — position 9
+2026-10-10 15:36:43  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:36:43  [DEBUG   ]  root — best hypo: ▁AND▁I'LL▁SEE▁YOU▁IN▁THE▁NEXT▁VIDEO
+2026-10-10 15:36:43  [DEBUG   ]  root — remained hypotheses: 22
+2026-10-10 15:36:43  [DEBUG   ]  root — position 10
+2026-10-10 15:36:44  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:36:44  [DEBUG   ]  root — best hypo: ▁AND▁I'LL▁SEE▁YOU▁IN▁THE▁NEXT▁VIDEO<eos>
+2026-10-10 15:36:44  [DEBUG   ]  root — remained hypotheses: 28
+2026-10-10 15:36:44  [DEBUG   ]  root — position 11
+2026-10-10 15:36:45  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:36:45  [DEBUG   ]  root — best hypo: ▁YOU'VE▁GOT▁TO▁BE▁A▁GOOD▁FRIEND▁OF▁MINE<eos>
+2026-10-10 15:36:45  [DEBUG   ]  root — remained hypotheses: 32
+2026-10-10 15:36:45  [DEBUG   ]  root — position 12
+2026-10-10 15:36:46  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:36:46  [DEBUG   ]  root — best hypo: ▁AND▁I'LL▁SEE▁YOU▁IN▁THE▁NEXT▁VIDEO▁BYE<eos>
+2026-10-10 15:36:46  [DEBUG   ]  root — remained hypotheses: 36
+2026-10-10 15:36:46  [DEBUG   ]  root — position 13
+2026-10-10 15:36:47  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:36:47  [DEBUG   ]  root — best hypo: ▁I▁DON'T▁KNOW▁I▁DON'T▁KNOW▁I▁DON'T
+2026-10-10 15:36:47  [DEBUG   ]  root — remained hypotheses: 36
+2026-10-10 15:36:47  [DEBUG   ]  root — position 14
+2026-10-10 15:36:48  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:36:48  [DEBUG   ]  root — best hypo: ▁I▁DON'T▁KNOW▁I▁DON'T▁KNOW▁I▁DON'T▁KNOW
+2026-10-10 15:36:48  [DEBUG   ]  root — remained hypotheses: 32
+2026-10-10 15:36:48  [DEBUG   ]  root — position 15
+2026-10-10 15:36:49  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:36:49  [DEBUG   ]  root — best hypo: ▁I▁DON'T▁KNOW▁I▁DON'T▁KNOW▁I▁DON'T▁KNOW▁I
+2026-10-10 15:36:49  [DEBUG   ]  root — remained hypotheses: 38
+2026-10-10 15:36:49  [DEBUG   ]  root — position 16
+2026-10-10 15:36:50  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:36:50  [DEBUG   ]  root — best hypo: ▁AND▁I'LL▁SEE▁YOU▁IN▁THE▁NEXT▁VIDEO▁I'LL▁SEE▁YOU▁IN▁THE
+2026-10-10 15:36:50  [DEBUG   ]  root — end detected at 16
+2026-10-10 15:36:51  [DEBUG   ]  root —  -6.40 * 0.9 =  -5.76 for decoder
+2026-10-10 15:36:51  [DEBUG   ]  root — -18.05 * 0.1 =  -1.80 for ctc
+2026-10-10 15:36:51  [DEBUG   ]  root — total log probability: -7.56
+2026-10-10 15:36:51  [DEBUG   ]  root — normalized log probability: -1.89
+2026-10-10 15:36:51  [DEBUG   ]  root — total number of ended hypotheses: 93
+2026-10-10 15:36:51  [DEBUG   ]  root — best hypo: ▁THANK▁YOU
+
+2026-10-10 15:36:51  [INFO    ]  modules.lip_module — [Lip] Expected  : 'hello triguard approve my request'
+      Transcript: 'thank you'
+      Similarity : 0.3500 | threshold=0.3 | passed=True
+2026-10-10 15:36:51  [DEBUG   ]  core.orchestrator — [lip] Module execution complete.
+2026-10-10 15:36:51  [INFO    ]  core.orchestrator — [LIP] PASS | Score: 0.3500 | Weighted: 0.0875 | Identity: liveness_verified
+2026-10-10 15:36:51  [WARNING ]  core.orchestrator — Authentication denied: face identified '2217010' but voice identified 'unknown'.
+2026-10-10 15:36:51  [INFO    ]  core.orchestrator — 
+============================================================
+  AUTHENTICATION RESULT - 2026-10-10 15:36:51
+============================================================
+  [VOICE ]  FAIL  [#.........]  score=0.135  weighted=0.047  id=unknown
+  [FACE  ]  PASS  [#####.....]  score=0.509  weighted=0.204  id=2217010
+  [LIP   ]  PASS  [####......]  score=0.350  weighted=0.087  id=liveness_verified
+------------------------------------------------------------
+  Final Score   : 0.3383  (threshold: 0.6)
+  Liveness OK   : True
+  Identity      : 2217010
+  ACCESS DENIED
+============================================================
+
+2026-10-10 15:36:51  [DEBUG   ]  core.capture_session — [Capture] Cleaned up temp file: C:\Users\User\AppData\Local\Temp\tmp2k_n3rhj_challenge.avi
+2026-10-10 15:36:51  [DEBUG   ]  core.capture_session — [Capture] Cleaned up temp file: C:\Users\User\AppData\Local\Temp\tmpec8e17of_challenge.wav
+2026-10-10 15:36:51  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:36:51] "GET /api/snapshot.jpg?t=1791626811061 HTTP/1.1" 200 -
+2026-10-10 15:36:51  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:36:51] "GET /api/preview.mjpg?t=1791626811062 HTTP/1.1" 200 -
+2026-10-10 15:36:51  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:36:51] "GET /api/preview.mjpg?t=1791626811089 HTTP/1.1" 200 -
+2026-10-10 15:38:10  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:38:10] "POST /api/start HTTP/1.1" 200 -
+2026-10-10 15:38:14  [INFO    ]  core.capture_session — [Capture] Sentence chosen: 'Hello Triguard, approve my request' | Recording for 4s
+2026-10-10 15:38:15  [INFO    ]  core.capture_session — [Capture] Using MTCNN for capture-time face counting.
+2026-10-10 15:38:17  [WARNING ]  core.capture_session — [Capture] 3 faces in tracking frame 0 - hard abort triggered.
+2026-10-10 15:38:17  [WARNING ]  core.capture_session — [Capture] Video recording aborted early due to multi-face detection.
+2026-10-10 15:38:19  [DEBUG   ]  core.capture_session — [Capture] Audio saved to 'C:\Users\User\AppData\Local\Temp\tmp5cdlxp9l_challenge.wav'.
+2026-10-10 15:38:19  [WARNING ]  core.capture_session — [Capture] HARD ABORT: multiple faces detected during capture.
+2026-10-10 15:38:19  [DEBUG   ]  core.capture_session — [Capture] Cleaned up temp file: C:\Users\User\AppData\Local\Temp\tmp1rpreglw_challenge.avi
+2026-10-10 15:38:19  [DEBUG   ]  core.capture_session — [Capture] Cleaned up temp file: C:\Users\User\AppData\Local\Temp\tmp5cdlxp9l_challenge.wav
+2026-10-10 15:38:19  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:38:19] "GET /api/snapshot.jpg?t=1791626899140 HTTP/1.1" 200 -
+2026-10-10 15:38:19  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:38:19] "GET /api/preview.mjpg?t=1791626899141 HTTP/1.1" 200 -
+2026-10-10 15:38:19  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:38:19] "GET /api/preview.mjpg?t=1791626899178 HTTP/1.1" 200 -
+2026-10-10 15:38:32  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:38:32] "POST /api/start HTTP/1.1" 200 -
+2026-10-10 15:38:36  [INFO    ]  core.capture_session — [Capture] Sentence chosen: 'Hello Triguard, verify my identity now' | Recording for 5s
+2026-10-10 15:38:37  [INFO    ]  core.capture_session — [Capture] Using MTCNN for capture-time face counting.
+2026-10-10 15:38:42  [DEBUG   ]  core.capture_session — [Capture] Audio saved to 'C:\Users\User\AppData\Local\Temp\tmp_6bcderh_challenge.wav'.
+2026-10-10 15:38:50  [INFO    ]  core.orchestrator — ============================================================
+2026-10-10 15:38:50  [INFO    ]  core.orchestrator — Authentication session started.
+2026-10-10 15:38:50  [INFO    ]  core.orchestrator — Active modules: ['face', 'voice', 'lip']
+2026-10-10 15:38:50  [DEBUG   ]  core.orchestrator — [face] Starting module execution...
+2026-10-10 15:38:50  [INFO    ]  modules.face_module — [Face] Processing 25 tracking frame(s).
+2026-10-10 15:38:50  [DEBUG   ]  core.orchestrator — [voice] Starting module execution...
+2026-10-10 15:38:50  [INFO    ]  modules.voice_module — [Voice] Verifying input: 'C:\Users\User\AppData\Local\Temp\tmp_6bcderh_challenge.wav'
+2026-10-10 15:38:50  [DEBUG   ]  core.orchestrator — [lip] Starting module execution...
+2026-10-10 15:38:50  [INFO    ]  modules.lip_module — [Lip] Running VSR inference | video='C:\Users\User\AppData\Local\Temp\tmpy0paq15v_challenge.avi' | expected='Hello Triguard, verify my identity now'
+2026-10-10 15:38:52  [INFO    ]  modules.voice_module — [Voice] Best match: '2317009' | score=0.3544 | threshold=0.35 | passed=True
+2026-10-10 15:38:52  [INFO    ]  modules.voice_module — [Voice] Top matches: [{'rank': 1, 'speaker': '2317009', 'score': 0.3544}, {'rank': 2, 'speaker': '2317046', 'score': 0.1061}, {'rank': 3, 'speaker': '2217010', 'score': 0.0786}]
+2026-10-10 15:38:52  [DEBUG   ]  core.orchestrator — [voice] Module execution complete.
+2026-10-10 15:38:52  [INFO    ]  core.orchestrator — [VOICE] PASS | Score: 0.3544 | Weighted: 0.1240 | Identity: 2317009
+2026-10-10 15:38:54  [DEBUG   ]  core.orchestrator — [face] Module execution complete.
+2026-10-10 15:38:54  [INFO    ]  core.orchestrator — [FACE] PASS | Score: 0.6496 | Weighted: 0.2599 | Identity: 2317009
+2026-10-10 15:39:02  [DEBUG   ]  root — decoder input length: 125
+2026-10-10 15:39:02  [DEBUG   ]  root — max output length: 125
+2026-10-10 15:39:02  [DEBUG   ]  root — min output length: 0
+2026-10-10 15:39:02  [DEBUG   ]  root — position 0
+2026-10-10 15:39:02  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:39:02  [DEBUG   ]  root — best hypo: ▁I
+2026-10-10 15:39:02  [DEBUG   ]  root — remained hypotheses: 40
+2026-10-10 15:39:02  [DEBUG   ]  root — position 1
+2026-10-10 15:39:03  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:39:03  [DEBUG   ]  root — best hypo: ▁I'
+2026-10-10 15:39:03  [DEBUG   ]  root — remained hypotheses: 40
+2026-10-10 15:39:03  [DEBUG   ]  root — position 2
+2026-10-10 15:39:05  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:39:05  [DEBUG   ]  root — best hypo: ▁I'M
+2026-10-10 15:39:05  [DEBUG   ]  root — remained hypotheses: 40
+2026-10-10 15:39:05  [DEBUG   ]  root — position 3
+2026-10-10 15:39:06  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:39:06  [DEBUG   ]  root — best hypo: ▁I▁DON'T
+2026-10-10 15:39:06  [DEBUG   ]  root — remained hypotheses: 40
+2026-10-10 15:39:06  [DEBUG   ]  root — position 4
+2026-10-10 15:39:07  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:39:07  [DEBUG   ]  root — best hypo: ▁I▁DON'T▁KNOW
+2026-10-10 15:39:07  [DEBUG   ]  root — remained hypotheses: 40
+2026-10-10 15:39:07  [DEBUG   ]  root — position 5
+2026-10-10 15:39:09  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:39:09  [DEBUG   ]  root — best hypo: ▁I▁DON'T▁KNOW▁WHAT
+2026-10-10 15:39:09  [DEBUG   ]  root — remained hypotheses: 40
+2026-10-10 15:39:09  [DEBUG   ]  root — position 6
+2026-10-10 15:39:10  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:39:10  [DEBUG   ]  root — best hypo: ▁I'LL▁SEE▁YOU▁IN▁THE
+2026-10-10 15:39:10  [DEBUG   ]  root — remained hypotheses: 40
+2026-10-10 15:39:10  [DEBUG   ]  root — position 7
+2026-10-10 15:39:11  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:39:11  [DEBUG   ]  root — best hypo: ▁AND▁I'LL▁SEE▁YOU▁IN▁THE
+2026-10-10 15:39:11  [DEBUG   ]  root — remained hypotheses: 39
+2026-10-10 15:39:11  [DEBUG   ]  root — position 8
+2026-10-10 15:39:13  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:39:13  [DEBUG   ]  root — best hypo: ▁AND▁I'LL▁SEE▁YOU▁IN▁THE▁NEXT
+2026-10-10 15:39:13  [DEBUG   ]  root — remained hypotheses: 39
+2026-10-10 15:39:13  [DEBUG   ]  root — position 9
+2026-10-10 15:39:14  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:39:14  [DEBUG   ]  root — best hypo: ▁I'LL▁SEE▁YOU▁IN▁THE▁NEXT▁VIDEO<eos>
+2026-10-10 15:39:14  [DEBUG   ]  root — remained hypotheses: 36
+2026-10-10 15:39:14  [DEBUG   ]  root — position 10
+2026-10-10 15:39:15  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:39:15  [DEBUG   ]  root — best hypo: ▁AND▁I'LL▁SEE▁YOU▁IN▁THE▁NEXT▁VIDEO<eos>
+2026-10-10 15:39:15  [DEBUG   ]  root — remained hypotheses: 34
+2026-10-10 15:39:15  [DEBUG   ]  root — position 11
+2026-10-10 15:39:17  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:39:17  [DEBUG   ]  root — best hypo: ▁AND▁I'LL▁SEE▁YOU▁GUYS▁IN▁THE▁NEXT▁VIDEO<eos>
+2026-10-10 15:39:17  [DEBUG   ]  root — remained hypotheses: 33
+2026-10-10 15:39:17  [DEBUG   ]  root — position 12
+2026-10-10 15:39:18  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:39:18  [DEBUG   ]  root — best hypo: ▁I▁DON'T▁KNOW▁I▁DON'T▁KNOW▁I▁DON'
+2026-10-10 15:39:18  [DEBUG   ]  root — remained hypotheses: 37
+2026-10-10 15:39:18  [DEBUG   ]  root — position 13
+2026-10-10 15:39:19  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:39:19  [DEBUG   ]  root — best hypo: ▁I▁DON'T▁KNOW▁I▁DON'T▁KNOW▁I▁DON'T
+2026-10-10 15:39:19  [DEBUG   ]  root — remained hypotheses: 38
+2026-10-10 15:39:19  [DEBUG   ]  root — position 14
+2026-10-10 15:39:20  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:39:20  [DEBUG   ]  root — best hypo: ▁I▁DON'T▁KNOW▁I▁DON'T▁KNOW▁I▁DON'T▁KNOW
+2026-10-10 15:39:20  [DEBUG   ]  root — remained hypotheses: 38
+2026-10-10 15:39:20  [DEBUG   ]  root — position 15
+2026-10-10 15:39:22  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:39:22  [DEBUG   ]  root — best hypo: ▁I'LL▁SEE▁YOU▁IN▁THE▁NEXT▁VIDEO▁I'LL▁SEE▁YOU▁IN▁THE
+2026-10-10 15:39:22  [DEBUG   ]  root — remained hypotheses: 39
+2026-10-10 15:39:22  [DEBUG   ]  root — position 16
+2026-10-10 15:39:23  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:39:23  [DEBUG   ]  root — best hypo: ▁I'LL▁SEE▁YOU▁IN▁THE▁NEXT▁VIDEO▁I'LL▁SEE▁YOU▁IN▁THE▁NEXT
+2026-10-10 15:39:23  [DEBUG   ]  root — remained hypotheses: 35
+2026-10-10 15:39:23  [DEBUG   ]  root — position 17
+2026-10-10 15:39:24  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:39:24  [DEBUG   ]  root — best hypo: ▁I'LL▁SEE▁YOU▁IN▁THE▁NEXT▁VIDEO▁I'LL▁SEE▁YOU▁IN▁THE▁NEXT▁VIDEO
+2026-10-10 15:39:24  [DEBUG   ]  root — remained hypotheses: 36
+2026-10-10 15:39:24  [DEBUG   ]  root — position 18
+2026-10-10 15:39:26  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:39:26  [DEBUG   ]  root — best hypo: ▁I'LL▁SEE▁YOU▁IN▁THE▁NEXT▁VIDEO▁I'LL▁SEE▁YOU▁IN▁THE▁NEXT▁VIDEO<eos>
+2026-10-10 15:39:26  [DEBUG   ]  root — remained hypotheses: 33
+2026-10-10 15:39:26  [DEBUG   ]  root — position 19
+2026-10-10 15:39:27  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:39:27  [DEBUG   ]  root — best hypo: ▁AND▁I'LL▁SEE▁YOU▁IN▁THE▁NEXT▁VIDEO▁I'LL▁SEE▁YOU▁IN▁THE▁NEXT▁VIDEO<eos>
+2026-10-10 15:39:27  [DEBUG   ]  root — remained hypotheses: 36
+2026-10-10 15:39:27  [DEBUG   ]  root — position 20
+2026-10-10 15:39:28  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:39:28  [DEBUG   ]  root — best hypo: ▁I▁DON'T▁KNOW▁I▁DON'T▁KNOW▁I▁DON'T▁KNOW▁I▁DON'T▁KNOW<eos>
+2026-10-10 15:39:28  [DEBUG   ]  root — remained hypotheses: 36
+2026-10-10 15:39:28  [DEBUG   ]  root — position 21
+2026-10-10 15:39:30  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:39:30  [DEBUG   ]  root — best hypo: ▁I▁DON'T▁KNOW▁WHAT▁TO▁SAY▁I▁DON'T▁KNOW▁WHAT▁TO▁SAY▁I▁DON'T▁KNOW▁WHAT
+2026-10-10 15:39:30  [DEBUG   ]  root — remained hypotheses: 30
+2026-10-10 15:39:30  [DEBUG   ]  root — position 22
+2026-10-10 15:39:31  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:39:31  [DEBUG   ]  root — best hypo: ▁I▁DON'T▁KNOW▁WHAT▁TO▁SAY▁I▁DON'T▁KNOW▁WHAT▁TO▁SAY▁I▁DON'T▁KNOW▁WHAT▁TO
+2026-10-10 15:39:31  [DEBUG   ]  root — remained hypotheses: 35
+2026-10-10 15:39:31  [DEBUG   ]  root — position 23
+2026-10-10 15:39:32  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:39:32  [DEBUG   ]  root — best hypo: ▁I▁DON'T▁KNOW▁WHAT▁TO▁SAY▁I▁DON'T▁KNOW▁WHAT▁TO▁SAY▁I▁DON'T▁KNOW▁WHAT▁TO▁SAY
+2026-10-10 15:39:32  [DEBUG   ]  root — end detected at 23
+2026-10-10 15:39:32  [DEBUG   ]  root —  -9.54 * 0.9 =  -8.58 for decoder
+2026-10-10 15:39:32  [DEBUG   ]  root — -37.62 * 0.1 =  -3.76 for ctc
+2026-10-10 15:39:32  [DEBUG   ]  root — total log probability: -12.35
+2026-10-10 15:39:32  [DEBUG   ]  root — normalized log probability: -1.37
+2026-10-10 15:39:32  [DEBUG   ]  root — total number of ended hypotheses: 72
+2026-10-10 15:39:32  [DEBUG   ]  root — best hypo: ▁I'LL▁SEE▁YOU▁NEXT▁TIME
+
+2026-10-10 15:39:32  [INFO    ]  modules.lip_module — [Lip] Expected  : 'hello triguard verify my identity now'
+      Transcript: 'ill see you next time'
+      Similarity : 0.3500 | threshold=0.3 | passed=True
+2026-10-10 15:39:32  [DEBUG   ]  core.orchestrator — [lip] Module execution complete.
+2026-10-10 15:39:32  [INFO    ]  core.orchestrator — [LIP] PASS | Score: 0.3500 | Weighted: 0.0875 | Identity: liveness_verified
+2026-10-10 15:39:32  [INFO    ]  core.orchestrator — 
+============================================================
+  AUTHENTICATION RESULT - 2026-10-10 15:39:32
+============================================================
+  [VOICE ]  PASS  [####......]  score=0.354  weighted=0.124  id=2317009
+  [FACE  ]  PASS  [######....]  score=0.650  weighted=0.260  id=2317009
+  [LIP   ]  PASS  [####......]  score=0.350  weighted=0.087  id=liveness_verified
+------------------------------------------------------------
+  Final Score   : 0.4714  (threshold: 0.6)
+  Liveness OK   : True
+  Identity      : 2317009
+  ACCESS DENIED
+============================================================
+
+2026-10-10 15:39:32  [DEBUG   ]  core.capture_session — [Capture] Cleaned up temp file: C:\Users\User\AppData\Local\Temp\tmpy0paq15v_challenge.avi
+2026-10-10 15:39:32  [DEBUG   ]  core.capture_session — [Capture] Cleaned up temp file: C:\Users\User\AppData\Local\Temp\tmp_6bcderh_challenge.wav
+2026-10-10 15:39:32  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:39:32] "GET /api/snapshot.jpg?t=1791626972790 HTTP/1.1" 200 -
+2026-10-10 15:39:32  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:39:32] "GET /api/preview.mjpg?t=1791626972792 HTTP/1.1" 200 -
+2026-10-10 15:40:30  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:40:30] "POST /api/start HTTP/1.1" 200 -
+2026-10-10 15:40:35  [INFO    ]  core.capture_session — [Capture] Sentence chosen: 'Hello Triguard, check my voice' | Recording for 4s
+2026-10-10 15:40:35  [INFO    ]  core.capture_session — [Capture] Using MTCNN for capture-time face counting.
+2026-10-10 15:40:39  [DEBUG   ]  core.capture_session — [Capture] Audio saved to 'C:\Users\User\AppData\Local\Temp\tmp6tmxrt05_challenge.wav'.
+2026-10-10 15:40:46  [INFO    ]  core.orchestrator — ============================================================
+2026-10-10 15:40:46  [INFO    ]  core.orchestrator — Authentication session started.
+2026-10-10 15:40:46  [INFO    ]  core.orchestrator — Active modules: ['face', 'voice', 'lip']
+2026-10-10 15:40:46  [DEBUG   ]  core.orchestrator — [face] Starting module execution...
+2026-10-10 15:40:46  [INFO    ]  modules.face_module — [Face] Processing 20 tracking frame(s).
+2026-10-10 15:40:46  [DEBUG   ]  core.orchestrator — [voice] Starting module execution...
+2026-10-10 15:40:46  [DEBUG   ]  core.orchestrator — [lip] Starting module execution...
+2026-10-10 15:40:46  [INFO    ]  modules.voice_module — [Voice] Verifying input: 'C:\Users\User\AppData\Local\Temp\tmp6tmxrt05_challenge.wav'
+2026-10-10 15:40:46  [INFO    ]  modules.lip_module — [Lip] Running VSR inference | video='C:\Users\User\AppData\Local\Temp\tmp83x77oa0_challenge.avi' | expected='Hello Triguard, check my voice'
+2026-10-10 15:40:48  [INFO    ]  modules.voice_module — [Voice] Best match: '2317046' | score=0.1006 | threshold=0.35 | passed=False
+2026-10-10 15:40:48  [INFO    ]  modules.voice_module — [Voice] Top matches: [{'rank': 1, 'speaker': '2317046', 'score': 0.1006}, {'rank': 2, 'speaker': '2317009', 'score': -0.0079}, {'rank': 3, 'speaker': '2217010', 'score': -0.0104}]
+2026-10-10 15:40:48  [DEBUG   ]  core.orchestrator — [voice] Module execution complete.
+2026-10-10 15:40:48  [INFO    ]  core.orchestrator — [VOICE] FAIL | Score: 0.1006 | Weighted: 0.0352 | Identity: unknown
+2026-10-10 15:40:48  [INFO    ]  modules.face_module — [Face] Frame 0: no valid match (best='None', dist=4.5046, conf=0.998).
+2026-10-10 15:40:50  [INFO    ]  modules.face_module — [Face] Frame 15: no valid match (best='None', dist=4.3118, conf=0.999).
+2026-10-10 15:40:50  [DEBUG   ]  core.orchestrator — [face] Module execution complete.
+2026-10-10 15:40:50  [INFO    ]  core.orchestrator — [FACE] FAIL | Score: 0.0000 | Weighted: 0.0000 | Identity: unknown
+2026-10-10 15:40:56  [DEBUG   ]  root — decoder input length: 100
+2026-10-10 15:40:56  [DEBUG   ]  root — max output length: 100
+2026-10-10 15:40:56  [DEBUG   ]  root — min output length: 0
+2026-10-10 15:40:56  [DEBUG   ]  root — position 0
+2026-10-10 15:40:56  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:40:56  [DEBUG   ]  root — best hypo: ▁I
+2026-10-10 15:40:56  [DEBUG   ]  root — remained hypotheses: 40
+2026-10-10 15:40:56  [DEBUG   ]  root — position 1
+2026-10-10 15:40:57  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:40:57  [DEBUG   ]  root — best hypo: ▁I▁KNOW
+2026-10-10 15:40:57  [DEBUG   ]  root — remained hypotheses: 40
+2026-10-10 15:40:57  [DEBUG   ]  root — position 2
+2026-10-10 15:40:58  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:40:58  [DEBUG   ]  root — best hypo: ▁I▁KNOW▁SOME
+2026-10-10 15:40:58  [DEBUG   ]  root — remained hypotheses: 40
+2026-10-10 15:40:58  [DEBUG   ]  root — position 3
+2026-10-10 15:40:59  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:40:59  [DEBUG   ]  root — best hypo: ▁I▁KNOW▁SOME▁VERY
+2026-10-10 15:40:59  [DEBUG   ]  root — remained hypotheses: 40
+2026-10-10 15:40:59  [DEBUG   ]  root — position 4
+2026-10-10 15:41:01  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:41:01  [DEBUG   ]  root — best hypo: ▁I▁KNOW▁SOME▁VERY▁SILLY
+2026-10-10 15:41:01  [DEBUG   ]  root — remained hypotheses: 40
+2026-10-10 15:41:01  [DEBUG   ]  root — position 5
+2026-10-10 15:41:02  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:41:02  [DEBUG   ]  root — best hypo: ▁I▁KNOW▁SOME▁VERY▁SILLY▁THINGS
+2026-10-10 15:41:02  [DEBUG   ]  root — remained hypotheses: 40
+2026-10-10 15:41:02  [DEBUG   ]  root — position 6
+2026-10-10 15:41:03  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:41:03  [DEBUG   ]  root — best hypo: ▁I▁KNOW▁SOME▁VERY▁SILLY▁THINGS▁ABOUT
+2026-10-10 15:41:03  [DEBUG   ]  root — remained hypotheses: 40
+2026-10-10 15:41:03  [DEBUG   ]  root — position 7
+2026-10-10 15:41:04  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:41:04  [DEBUG   ]  root — best hypo: ▁I▁KNOW▁SOME▁VERY▁SILLY▁THINGS▁ABOUT▁THE
+2026-10-10 15:41:04  [DEBUG   ]  root — remained hypotheses: 40
+2026-10-10 15:41:04  [DEBUG   ]  root — position 8
+2026-10-10 15:41:05  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:41:05  [DEBUG   ]  root — best hypo: ▁I▁KNOW▁SOME▁VERY▁SLEEK▁AND
+2026-10-10 15:41:05  [DEBUG   ]  root — remained hypotheses: 36
+2026-10-10 15:41:05  [DEBUG   ]  root — position 9
+2026-10-10 15:41:06  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:41:06  [DEBUG   ]  root — best hypo: ▁I▁KNOW▁SOME▁OF▁YOU▁ARE▁VERY▁SILLY▁AND▁YOU
+2026-10-10 15:41:06  [DEBUG   ]  root — remained hypotheses: 36
+2026-10-10 15:41:06  [DEBUG   ]  root — position 10
+2026-10-10 15:41:07  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:41:07  [DEBUG   ]  root — best hypo: ▁I▁KNOW▁SOME▁VERY▁SLEEK▁ENGLISH▁SPEAKERS
+2026-10-10 15:41:07  [DEBUG   ]  root — remained hypotheses: 37
+2026-10-10 15:41:07  [DEBUG   ]  root — position 11
+2026-10-10 15:41:09  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:41:09  [DEBUG   ]  root — best hypo: ▁I▁KNOW▁SOME▁OF▁YOU▁ARE▁VERY▁SILLY▁AND▁YOU'RE
+2026-10-10 15:41:09  [DEBUG   ]  root — remained hypotheses: 37
+2026-10-10 15:41:09  [DEBUG   ]  root — position 12
+2026-10-10 15:41:10  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:41:10  [DEBUG   ]  root — best hypo: ▁I▁KNOW▁SOME▁OF▁YOU▁ARE▁VERY▁SKINNY▁AND▁YOU'RE
+2026-10-10 15:41:10  [DEBUG   ]  root — remained hypotheses: 38
+2026-10-10 15:41:10  [DEBUG   ]  root — position 13
+2026-10-10 15:41:11  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:41:11  [DEBUG   ]  root — best hypo: ▁I▁KNOW▁SOME▁OF▁YOU▁ARE▁VERY▁SILLY▁AND▁YOU'RE▁GOING▁TO
+2026-10-10 15:41:11  [DEBUG   ]  root — remained hypotheses: 37
+2026-10-10 15:41:11  [DEBUG   ]  root — position 14
+2026-10-10 15:41:12  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:41:12  [DEBUG   ]  root — best hypo: ▁I▁KNOW▁SOME▁VERY▁SILLY▁THINGS▁I'M▁GOING▁TO▁TELL▁YOU▁ABOUT<eos>
+2026-10-10 15:41:12  [DEBUG   ]  root — remained hypotheses: 36
+2026-10-10 15:41:12  [DEBUG   ]  root — position 15
+2026-10-10 15:41:13  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:41:13  [DEBUG   ]  root — best hypo: ▁I▁KNOW▁SOME▁OF▁YOU▁ARE▁VERY▁SLICK▁AND▁YOU'RE▁GOING▁TO
+2026-10-10 15:41:13  [DEBUG   ]  root — remained hypotheses: 37
+2026-10-10 15:41:13  [DEBUG   ]  root — position 16
+2026-10-10 15:41:15  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:41:15  [DEBUG   ]  root — best hypo: ▁I▁KNOW▁SOME▁VERY▁SILLY▁AND▁I'M▁GOING▁TO▁TELL▁YOU▁A▁LITTLE▁BIT▁ABOUT
+2026-10-10 15:41:15  [DEBUG   ]  root — remained hypotheses: 30
+2026-10-10 15:41:15  [DEBUG   ]  root — position 17
+2026-10-10 15:41:16  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:41:16  [DEBUG   ]  root — best hypo: ▁I▁KNOW▁SOME▁VERY▁SILLY▁AND▁I'M▁GOING▁TO▁TELL▁YOU▁A▁LITTLE▁BIT▁ABOUT<eos>
+2026-10-10 15:41:16  [DEBUG   ]  root — remained hypotheses: 33
+2026-10-10 15:41:16  [DEBUG   ]  root — position 18
+2026-10-10 15:41:17  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:41:17  [DEBUG   ]  root — best hypo: ▁I▁KNOW▁SOME▁OF▁YOU▁ARE▁VERY▁SLICK▁AND▁I▁KNOW▁SOME▁OF▁YOU▁ARE▁VERY<eos>
+2026-10-10 15:41:17  [DEBUG   ]  root — remained hypotheses: 22
+2026-10-10 15:41:17  [DEBUG   ]  root — position 19
+2026-10-10 15:41:18  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:41:18  [DEBUG   ]  root — best hypo: ▁I▁KNOW▁SOME▁OF▁YOU▁ARE▁VERY▁SILLY▁AND▁I'M▁GOING▁TO▁TELL▁YOU▁A▁LITTLE▁BIT▁ABOUT
+2026-10-10 15:41:18  [DEBUG   ]  root — remained hypotheses: 29
+2026-10-10 15:41:18  [DEBUG   ]  root — position 20
+2026-10-10 15:41:18  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:41:18  [DEBUG   ]  root — best hypo: ▁I▁KNOW▁SOME▁OF▁YOU▁ARE▁VERY▁SLICK▁AND▁I▁KNOW▁SOME▁OF▁YOU▁ARE▁VERY▁SLICK
+2026-10-10 15:41:19  [DEBUG   ]  root — end detected at 20
+2026-10-10 15:41:19  [DEBUG   ]  root —  -9.74 * 0.9 =  -8.77 for decoder
+2026-10-10 15:41:19  [DEBUG   ]  root — -24.82 * 0.1 =  -2.48 for ctc
+2026-10-10 15:41:19  [DEBUG   ]  root — total log probability: -11.25
+2026-10-10 15:41:19  [DEBUG   ]  root — normalized log probability: -1.12
+2026-10-10 15:41:19  [DEBUG   ]  root — total number of ended hypotheses: 83
+2026-10-10 15:41:19  [DEBUG   ]  root — best hypo: ▁I▁KNOW▁SOME▁VERY▁SILLY▁ENGLISH▁SPEAKERS
+
+2026-10-10 15:41:19  [INFO    ]  modules.lip_module — [Lip] Expected  : 'hello triguard check my voice'
+      Transcript: 'i know some very silly english speakers'
+      Similarity : 0.3500 | threshold=0.3 | passed=True
+2026-10-10 15:41:19  [DEBUG   ]  core.orchestrator — [lip] Module execution complete.
+2026-10-10 15:41:19  [INFO    ]  core.orchestrator — [LIP] PASS | Score: 0.3500 | Weighted: 0.0875 | Identity: liveness_verified
+2026-10-10 15:41:19  [WARNING ]  core.orchestrator — Authentication denied: face identified 'unknown' but voice identified 'unknown'.
+2026-10-10 15:41:19  [INFO    ]  core.orchestrator — 
+============================================================
+  AUTHENTICATION RESULT - 2026-10-10 15:41:19
+============================================================
+  [VOICE ]  FAIL  [#.........]  score=0.101  weighted=0.035  id=unknown
+  [FACE  ]  FAIL  [..........]  score=0.000  weighted=0.000  id=unknown
+  [LIP   ]  PASS  [####......]  score=0.350  weighted=0.087  id=liveness_verified
+------------------------------------------------------------
+  Final Score   : 0.1227  (threshold: 0.6)
+  Liveness OK   : True
+  Identity      : liveness_verified
+  ACCESS DENIED
+============================================================
+
+2026-10-10 15:41:19  [DEBUG   ]  core.capture_session — [Capture] Cleaned up temp file: C:\Users\User\AppData\Local\Temp\tmp83x77oa0_challenge.avi
+2026-10-10 15:41:19  [DEBUG   ]  core.capture_session — [Capture] Cleaned up temp file: C:\Users\User\AppData\Local\Temp\tmp6tmxrt05_challenge.wav
+2026-10-10 15:41:19  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:41:19] "GET /api/snapshot.jpg?t=1791627079041 HTTP/1.1" 200 -
+2026-10-10 15:41:19  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:41:19] "GET /api/preview.mjpg?t=1791627079042 HTTP/1.1" 200 -
+2026-10-10 15:41:19  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:41:19] "GET /api/preview.mjpg?t=1791627079072 HTTP/1.1" 200 -
+2026-10-10 15:47:37  [INFO    ]  root — Logger initialized. Log file: logs/auth_2026-10-10.log
+2026-10-10 15:47:37  [INFO    ]  core.config_loader — Config loaded successfully.
+2026-10-10 15:47:37  [INFO    ]  core.config_loader — Active modules: ['face', 'voice', 'lip']
+2026-10-10 15:47:37  [INFO    ]  root — Logger initialized. Log file: logs/auth_2026-10-10.log
+2026-10-10 15:47:37  [INFO    ]  werkzeug — [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-10-10 15:47:37  [INFO    ]  werkzeug — [33mPress CTRL+C to quit[0m
+2026-10-10 15:47:48  [DEBUG   ]  tensorflow — Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2026-10-10 15:47:51  [DEBUG   ]  h5py._conv — Creating converter from 7 to 5
+2026-10-10 15:47:51  [DEBUG   ]  h5py._conv — Creating converter from 5 to 7
+2026-10-10 15:47:51  [DEBUG   ]  h5py._conv — Creating converter from 7 to 5
+2026-10-10 15:47:51  [DEBUG   ]  h5py._conv — Creating converter from 5 to 7
+2026-10-10 15:47:59  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:47:59] "[36mGET / HTTP/1.1[0m" 304 -
+2026-10-10 15:47:59  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:47:59] "GET /api/preview.mjpg HTTP/1.1" 200 -
+2026-10-10 15:47:59  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:47:59] "GET /api/status HTTP/1.1" 200 -
+2026-10-10 15:47:59  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:47:59] "GET /api/events HTTP/1.1" 200 -
+2026-10-10 15:48:07  [DEBUG   ]  matplotlib — matplotlib data path: C:\Program Files\Python310\lib\site-packages\matplotlib\mpl-data
+2026-10-10 15:48:07  [DEBUG   ]  matplotlib — CONFIGDIR=C:\Users\User\.matplotlib
+2026-10-10 15:48:07  [DEBUG   ]  matplotlib — interactive is False
+2026-10-10 15:48:07  [DEBUG   ]  matplotlib — platform is win32
+2026-10-10 15:48:07  [DEBUG   ]  matplotlib — CACHEDIR=C:\Users\User\.matplotlib
+2026-10-10 15:48:07  [DEBUG   ]  matplotlib.font_manager — Using fontManager instance from C:\Users\User\.matplotlib\fontlist-v390.json
+2026-10-10 15:48:17  [INFO    ]  modules.face_module — [Face] Loaded 38 individual embeddings across 3 identities from 'data/face_embeddings/student_embeddings.pkl'.
+2026-10-10 15:48:17  [INFO    ]  modules.face_module — [Face] MTCNN detector initialized.
+2026-10-10 15:48:20  [DEBUG   ]  h5py._conv — Creating converter from 3 to 5
+2026-10-10 15:48:23  [INFO    ]  modules.face_module — [Face] ArcFace model pre-built (cached for sessions).
+2026-10-10 15:48:23  [INFO    ]  main — [Main] FaceModule ready.
+2026-10-10 15:48:46  [DEBUG   ]  torio._extension.utils — Loading FFmpeg6
+2026-10-10 15:48:46  [DEBUG   ]  torio._extension.utils — Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torch\_ops.py", line 1392, in load_library
+    ctypes.CDLL(path)
+  File "C:\Program Files\Python310\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\lib\libtorio_ffmpeg6.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2026-10-10 15:48:46  [DEBUG   ]  torio._extension.utils — Loading FFmpeg5
+2026-10-10 15:48:46  [DEBUG   ]  torio._extension.utils — Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torch\_ops.py", line 1392, in load_library
+    ctypes.CDLL(path)
+  File "C:\Program Files\Python310\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\lib\libtorio_ffmpeg5.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2026-10-10 15:48:46  [DEBUG   ]  torio._extension.utils — Loading FFmpeg4
+2026-10-10 15:48:46  [DEBUG   ]  torio._extension.utils — Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torch\_ops.py", line 1392, in load_library
+    ctypes.CDLL(path)
+  File "C:\Program Files\Python310\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\lib\libtorio_ffmpeg4.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2026-10-10 15:48:46  [DEBUG   ]  torio._extension.utils — Loading FFmpeg
+2026-10-10 15:48:46  [DEBUG   ]  torio._extension.utils — Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2026-10-10 15:48:47  [INFO    ]  speechbrain.utils.quirks — Applied quirks (see `speechbrain.utils.quirks`): [disable_jit_profiling, allow_tf32]
+2026-10-10 15:48:47  [INFO    ]  speechbrain.utils.quirks — Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2026-10-10 15:48:47  [INFO    ]  modules.voice_module — [Voice] Loading ECAPA-TDNN on cpu...
+2026-10-10 15:48:47  [INFO    ]  speechbrain.utils.fetching — Fetch hyperparams.yaml: Using file found at 'C:\Users\User\Desktop\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\hyperparams.yaml'
+2026-10-10 15:48:48  [INFO    ]  speechbrain.utils.fetching — Fetch embedding_model.ckpt: Using file found at 'C:\Users\User\Desktop\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\embedding_model.ckpt'
+2026-10-10 15:48:48  [INFO    ]  speechbrain.utils.fetching — Fetch mean_var_norm_emb.ckpt: Using file found at 'C:\Users\User\Desktop\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\mean_var_norm_emb.ckpt'
+2026-10-10 15:48:48  [INFO    ]  speechbrain.utils.fetching — Fetch classifier.ckpt: Using file found at 'C:\Users\User\Desktop\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\classifier.ckpt'
+2026-10-10 15:48:48  [INFO    ]  speechbrain.utils.fetching — Fetch label_encoder.txt: Using file found at 'C:\Users\User\Desktop\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\label_encoder.ckpt'
+2026-10-10 15:48:48  [INFO    ]  speechbrain.utils.parameter_transfer — Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2026-10-10 15:48:49  [INFO    ]  modules.voice_module — [Voice] Model loaded.
+2026-10-10 15:48:49  [INFO    ]  modules.voice_module — [Voice] Loaded 3 speaker(s) from 'data/voice_dataset/voice_embedding_db.pkl'.
+2026-10-10 15:48:49  [DEBUG   ]  modules.voice_module — [Voice]   2217010: 10 embedding(s), dims=[192]
+2026-10-10 15:48:49  [DEBUG   ]  modules.voice_module — [Voice]   2317009: 10 embedding(s), dims=[192]
+2026-10-10 15:48:49  [DEBUG   ]  modules.voice_module — [Voice]   2317046: 10 embedding(s), dims=[192]
+2026-10-10 15:48:49  [INFO    ]  main — [Main] VoiceModule ready.
+2026-10-10 15:48:49  [DEBUG   ]  modules.lip_module — [Lip] SpeechBrain LazyModule patched.
+2026-10-10 15:48:49  [WARNING ]  modules.lip_module — [Lip] CUDA not available — falling back to CPU.
+2026-10-10 15:48:49  [INFO    ]  modules.lip_module — [Lip] Loading VSR model from 'data/lip_weights/vsr_trlrs2lrs3vox2avsp_base.pth' on cpu...
+2026-10-10 15:48:51  [INFO    ]  speechbrain.integrations.numba.transducer_loss — Numba verbose is deactivated. To enable it, set NUMBA_VERBOSE to 1.
+2026-10-10 15:49:14  [INFO    ]  modules.lip_module — [Lip] VSR model loaded.
+2026-10-10 15:49:14  [INFO    ]  main — [Main] LipModule ready.
+2026-10-10 15:49:14  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:49:14] "GET /api/preview.mjpg?t=1791627554815 HTTP/1.1" 200 -
+2026-10-10 15:49:17  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:49:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-10-10 15:49:32  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:49:32] "POST /api/start HTTP/1.1" 200 -
+2026-10-10 15:49:36  [INFO    ]  core.capture_session — [Capture] Sentence chosen: 'Hello Triguard, Start verification now' | Recording for 4s
+2026-10-10 15:49:37  [INFO    ]  core.capture_session — [Capture] Using MTCNN for capture-time face counting.
+2026-10-10 15:49:42  [DEBUG   ]  core.capture_session — [Capture] Audio saved to 'C:\Users\User\AppData\Local\Temp\tmpt_e90c9s_challenge.wav'.
+2026-10-10 15:49:50  [INFO    ]  core.orchestrator — ============================================================
+2026-10-10 15:49:50  [INFO    ]  core.orchestrator — Authentication session started.
+2026-10-10 15:49:50  [INFO    ]  core.orchestrator — Active modules: ['face', 'voice', 'lip']
+2026-10-10 15:49:50  [DEBUG   ]  core.orchestrator — [face] Starting module execution...
+2026-10-10 15:49:50  [DEBUG   ]  core.orchestrator — [voice] Starting module execution...
+2026-10-10 15:49:50  [INFO    ]  modules.face_module — [Face] Processing 20 tracking frame(s).
+2026-10-10 15:49:50  [DEBUG   ]  core.orchestrator — [lip] Starting module execution...
+2026-10-10 15:49:50  [INFO    ]  modules.voice_module — [Voice] Verifying input: 'C:\Users\User\AppData\Local\Temp\tmpt_e90c9s_challenge.wav'
+2026-10-10 15:49:50  [INFO    ]  modules.lip_module — [Lip] Running VSR inference | video='C:\Users\User\AppData\Local\Temp\tmpbk7eazli_challenge.avi' | expected='Hello Triguard, Start verification now'
+2026-10-10 15:49:53  [INFO    ]  modules.voice_module — [Voice] Best match: '2317046' | score=0.1244 | threshold=0.35 | passed=False
+2026-10-10 15:49:53  [INFO    ]  modules.voice_module — [Voice] Top matches: [{'rank': 1, 'speaker': '2317046', 'score': 0.1244}, {'rank': 2, 'speaker': '2317009', 'score': 0.0946}, {'rank': 3, 'speaker': '2217010', 'score': 0.087}]
+2026-10-10 15:49:53  [DEBUG   ]  core.orchestrator — [voice] Module execution complete.
+2026-10-10 15:49:53  [INFO    ]  core.orchestrator — [VOICE] FAIL | Score: 0.1244 | Weighted: 0.0436 | Identity: unknown
+2026-10-10 15:50:01  [INFO    ]  modules.face_module — [Face] Frame 0: no valid match (best='None', dist=4.9278, conf=1.000).
+2026-10-10 15:50:04  [INFO    ]  modules.face_module — [Face] Frame 15: no valid match (best='None', dist=4.9101, conf=1.000).
+2026-10-10 15:50:04  [DEBUG   ]  core.orchestrator — [face] Module execution complete.
+2026-10-10 15:50:04  [INFO    ]  core.orchestrator — [FACE] FAIL | Score: 0.0000 | Weighted: 0.0000 | Identity: unknown
+2026-10-10 15:50:04  [DEBUG   ]  root — decoder input length: 100
+2026-10-10 15:50:04  [DEBUG   ]  root — max output length: 100
+2026-10-10 15:50:04  [DEBUG   ]  root — min output length: 0
+2026-10-10 15:50:04  [DEBUG   ]  root — position 0
+2026-10-10 15:50:04  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:50:04  [DEBUG   ]  root — best hypo: ▁I
+2026-10-10 15:50:04  [DEBUG   ]  root — remained hypotheses: 40
+2026-10-10 15:50:04  [DEBUG   ]  root — position 1
+2026-10-10 15:50:06  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:50:06  [DEBUG   ]  root — best hypo: ▁I▁GUESS
+2026-10-10 15:50:06  [DEBUG   ]  root — remained hypotheses: 40
+2026-10-10 15:50:06  [DEBUG   ]  root — position 2
+2026-10-10 15:50:07  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:50:07  [DEBUG   ]  root — best hypo: ▁I▁GUESS▁I
+2026-10-10 15:50:07  [DEBUG   ]  root — remained hypotheses: 39
+2026-10-10 15:50:07  [DEBUG   ]  root — position 3
+2026-10-10 15:50:08  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:50:08  [DEBUG   ]  root — best hypo: ▁I▁GUESS▁I'
+2026-10-10 15:50:08  [DEBUG   ]  root — remained hypotheses: 40
+2026-10-10 15:50:08  [DEBUG   ]  root — position 4
+2026-10-10 15:50:09  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:50:09  [DEBUG   ]  root — best hypo: ▁I▁GUESS▁IT'S
+2026-10-10 15:50:09  [DEBUG   ]  root — remained hypotheses: 39
+2026-10-10 15:50:09  [DEBUG   ]  root — position 5
+2026-10-10 15:50:11  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:50:11  [DEBUG   ]  root — best hypo: ▁I▁GUESS▁IT'S▁A
+2026-10-10 15:50:11  [DEBUG   ]  root — remained hypotheses: 39
+2026-10-10 15:50:11  [DEBUG   ]  root — position 6
+2026-10-10 15:50:12  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:50:12  [DEBUG   ]  root — best hypo: ▁I▁GUESS▁I▁DON'T▁KNOW
+2026-10-10 15:50:12  [DEBUG   ]  root — remained hypotheses: 35
+2026-10-10 15:50:12  [DEBUG   ]  root — position 7
+2026-10-10 15:50:13  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:50:13  [DEBUG   ]  root — best hypo: ▁I▁GUESS▁I▁DON'T▁KNOW▁I
+2026-10-10 15:50:13  [DEBUG   ]  root — remained hypotheses: 37
+2026-10-10 15:50:13  [DEBUG   ]  root — position 8
+2026-10-10 15:50:14  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:50:14  [DEBUG   ]  root — best hypo: ▁I▁GUESS▁THAT'S▁WHAT▁I'M
+2026-10-10 15:50:14  [DEBUG   ]  root — remained hypotheses: 34
+2026-10-10 15:50:14  [DEBUG   ]  root — position 9
+2026-10-10 15:50:15  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:50:15  [DEBUG   ]  root — best hypo: ▁I▁GUESS▁I▁DON'T▁KNOW▁IT'S
+2026-10-10 15:50:15  [DEBUG   ]  root — remained hypotheses: 38
+2026-10-10 15:50:15  [DEBUG   ]  root — position 10
+2026-10-10 15:50:17  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:50:17  [DEBUG   ]  root — best hypo: ▁I▁GUESS▁I▁DON'T▁KNOW▁I▁DON'T
+2026-10-10 15:50:17  [DEBUG   ]  root — remained hypotheses: 36
+2026-10-10 15:50:17  [DEBUG   ]  root — position 11
+2026-10-10 15:50:18  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:50:18  [DEBUG   ]  root — best hypo: ▁I▁GUESS▁I▁DON'T▁KNOW▁I▁DON'T▁KNOW
+2026-10-10 15:50:18  [DEBUG   ]  root — remained hypotheses: 32
+2026-10-10 15:50:18  [DEBUG   ]  root — position 12
+2026-10-10 15:50:19  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:50:19  [DEBUG   ]  root — best hypo: ▁I▁GUESS▁I▁DON'T▁KNOW▁I▁DON'T▁KNOW<eos>
+2026-10-10 15:50:19  [DEBUG   ]  root — remained hypotheses: 27
+2026-10-10 15:50:19  [DEBUG   ]  root — position 13
+2026-10-10 15:50:20  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:50:20  [DEBUG   ]  root — best hypo: ▁I▁GUESS▁I▁DON'T▁KNOW▁WHAT▁YOU'RE▁TALKING▁ABOUT<eos>
+2026-10-10 15:50:20  [DEBUG   ]  root — remained hypotheses: 30
+2026-10-10 15:50:20  [DEBUG   ]  root — position 14
+2026-10-10 15:50:21  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:50:21  [DEBUG   ]  root — best hypo: ▁I▁GUESS▁I▁DON'T▁KNOW▁I▁DON'T▁KNOW▁IT'S
+2026-10-10 15:50:21  [DEBUG   ]  root — remained hypotheses: 31
+2026-10-10 15:50:21  [DEBUG   ]  root — position 15
+2026-10-10 15:50:22  [DEBUG   ]  root — the number of running hypothes: 40
+2026-10-10 15:50:22  [DEBUG   ]  root — best hypo: ▁I▁GUESS▁I▁DON'T▁KNOW▁I▁DON'T▁KNOW▁I▁DON'T
+2026-10-10 15:50:22  [DEBUG   ]  root — end detected at 15
+2026-10-10 15:50:22  [DEBUG   ]  root —  -3.29 * 0.9 =  -2.96 for decoder
+2026-10-10 15:50:22  [DEBUG   ]  root —  -7.89 * 0.1 =  -0.79 for ctc
+2026-10-10 15:50:22  [DEBUG   ]  root — total log probability: -3.75
+2026-10-10 15:50:22  [DEBUG   ]  root — normalized log probability: -0.94
+2026-10-10 15:50:22  [DEBUG   ]  root — total number of ended hypotheses: 71
+2026-10-10 15:50:22  [DEBUG   ]  root — best hypo: ▁I▁GUESS
+
+2026-10-10 15:50:22  [INFO    ]  modules.lip_module — [Lip] Expected  : 'hello triguard start verification now'
+      Transcript: 'i guess'
+      Similarity : 0.3500 | threshold=0.3 | passed=True
+2026-10-10 15:50:22  [DEBUG   ]  core.orchestrator — [lip] Module execution complete.
+2026-10-10 15:50:22  [INFO    ]  core.orchestrator — [LIP] PASS | Score: 0.3500 | Weighted: 0.0875 | Identity: liveness_verified
+2026-10-10 15:50:22  [WARNING ]  core.orchestrator — Authentication denied: face identified 'unknown' but voice identified 'unknown'.
+2026-10-10 15:50:22  [INFO    ]  core.orchestrator — 
+============================================================
+  AUTHENTICATION RESULT - 2026-10-10 15:50:22
+============================================================
+  [VOICE ]  FAIL  [#.........]  score=0.124  weighted=0.044  id=unknown
+  [FACE  ]  FAIL  [..........]  score=0.000  weighted=0.000  id=unknown
+  [LIP   ]  PASS  [####......]  score=0.350  weighted=0.087  id=liveness_verified
+------------------------------------------------------------
+  Final Score   : 0.1311  (threshold: 0.6)
+  Liveness OK   : True
+  Identity      : liveness_verified
+  ACCESS DENIED
+============================================================
+
+2026-10-10 15:50:22  [DEBUG   ]  core.capture_session — [Capture] Cleaned up temp file: C:\Users\User\AppData\Local\Temp\tmpbk7eazli_challenge.avi
+2026-10-10 15:50:22  [DEBUG   ]  core.capture_session — [Capture] Cleaned up temp file: C:\Users\User\AppData\Local\Temp\tmpt_e90c9s_challenge.wav
+2026-10-10 15:50:22  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:50:22] "GET /api/snapshot.jpg?t=1791627622422 HTTP/1.1" 200 -
+2026-10-10 15:50:22  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:50:22] "GET /api/preview.mjpg?t=1791627622428 HTTP/1.1" 200 -
+2026-10-10 15:50:22  [INFO    ]  werkzeug — 127.0.0.1 - - [10/Oct/2026 15:50:22] "GET /api/preview.mjpg?t=1791627622430 HTTP/1.1" 200 -

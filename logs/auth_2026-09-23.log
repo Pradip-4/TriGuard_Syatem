@@ -1,0 +1,538 @@
+2026-09-23 23:30:09  [INFO    ]  root — Logger initialized. Log file: logs/auth_2026-09-23.log
+2026-09-23 23:34:13  [INFO    ]  root — Logger initialized. Log file: logs/auth_2026-09-23.log
+2026-09-23 23:34:59  [INFO    ]  root — Logger initialized. Log file: logs/auth_2026-09-23.log
+2026-09-23 23:34:59  [INFO    ]  core.config_loader — Config loaded successfully.
+2026-09-23 23:34:59  [INFO    ]  core.config_loader — Active modules: ['face', 'voice', 'lip']
+2026-09-23 23:34:59  [INFO    ]  root — Logger initialized. Log file: logs/auth_2026-09-23.log
+2026-09-23 23:34:59  [INFO    ]  werkzeug — [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-09-23 23:34:59  [INFO    ]  werkzeug — [33mPress CTRL+C to quit[0m
+2026-09-23 23:35:03  [DEBUG   ]  tensorflow — Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2026-09-23 23:35:05  [DEBUG   ]  h5py._conv — Creating converter from 7 to 5
+2026-09-23 23:35:05  [DEBUG   ]  h5py._conv — Creating converter from 5 to 7
+2026-09-23 23:35:05  [DEBUG   ]  h5py._conv — Creating converter from 7 to 5
+2026-09-23 23:35:05  [DEBUG   ]  h5py._conv — Creating converter from 5 to 7
+2026-09-23 23:35:09  [DEBUG   ]  matplotlib — matplotlib data path: C:\Program Files\Python310\lib\site-packages\matplotlib\mpl-data
+2026-09-23 23:35:09  [DEBUG   ]  matplotlib — CONFIGDIR=C:\Users\User\.matplotlib
+2026-09-23 23:35:09  [DEBUG   ]  matplotlib — interactive is False
+2026-09-23 23:35:09  [DEBUG   ]  matplotlib — platform is win32
+2026-09-23 23:35:10  [DEBUG   ]  matplotlib — CACHEDIR=C:\Users\User\.matplotlib
+2026-09-23 23:35:10  [DEBUG   ]  matplotlib.font_manager — Using fontManager instance from C:\Users\User\.matplotlib\fontlist-v390.json
+2026-09-23 23:35:13  [INFO    ]  modules.face_module — [Face] Loaded 45 individual embeddings across 3 identities from 'data/face_embeddings/student_embeddings.pkl'.
+2026-09-23 23:35:14  [INFO    ]  modules.face_module — [Face] MTCNN detector initialized.
+2026-09-23 23:35:14  [INFO    ]  main — [Main] FaceModule ready.
+2026-09-23 23:35:22  [DEBUG   ]  torio._extension.utils — Loading FFmpeg6
+2026-09-23 23:35:22  [DEBUG   ]  torio._extension.utils — Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torch\_ops.py", line 1392, in load_library
+    ctypes.CDLL(path)
+  File "C:\Program Files\Python310\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\lib\libtorio_ffmpeg6.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2026-09-23 23:35:22  [DEBUG   ]  torio._extension.utils — Loading FFmpeg5
+2026-09-23 23:35:22  [DEBUG   ]  torio._extension.utils — Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torch\_ops.py", line 1392, in load_library
+    ctypes.CDLL(path)
+  File "C:\Program Files\Python310\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\lib\libtorio_ffmpeg5.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2026-09-23 23:35:22  [DEBUG   ]  torio._extension.utils — Loading FFmpeg4
+2026-09-23 23:35:22  [DEBUG   ]  torio._extension.utils — Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torch\_ops.py", line 1392, in load_library
+    ctypes.CDLL(path)
+  File "C:\Program Files\Python310\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\lib\libtorio_ffmpeg4.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2026-09-23 23:35:22  [DEBUG   ]  torio._extension.utils — Loading FFmpeg
+2026-09-23 23:35:22  [DEBUG   ]  torio._extension.utils — Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2026-09-23 23:35:23  [INFO    ]  speechbrain.utils.quirks — Applied quirks (see `speechbrain.utils.quirks`): [disable_jit_profiling, allow_tf32]
+2026-09-23 23:35:23  [INFO    ]  speechbrain.utils.quirks — Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2026-09-23 23:35:23  [INFO    ]  modules.voice_module — [Voice] Loading ECAPA-TDNN on cpu...
+2026-09-23 23:35:23  [INFO    ]  speechbrain.utils.fetching — Fetch hyperparams.yaml: Using file found at 'C:\Users\User\OneDrive\Capstone G7\Oencode1\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\hyperparams.yaml'
+2026-09-23 23:35:24  [INFO    ]  speechbrain.utils.fetching — Fetch embedding_model.ckpt: Using file found at 'C:\Users\User\OneDrive\Capstone G7\Oencode1\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\embedding_model.ckpt'
+2026-09-23 23:35:24  [INFO    ]  speechbrain.utils.fetching — Fetch mean_var_norm_emb.ckpt: Using file found at 'C:\Users\User\OneDrive\Capstone G7\Oencode1\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\mean_var_norm_emb.ckpt'
+2026-09-23 23:35:24  [INFO    ]  speechbrain.utils.fetching — Fetch classifier.ckpt: Using file found at 'C:\Users\User\OneDrive\Capstone G7\Oencode1\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\classifier.ckpt'
+2026-09-23 23:35:24  [INFO    ]  speechbrain.utils.fetching — Fetch label_encoder.txt: Using file found at 'C:\Users\User\OneDrive\Capstone G7\Oencode1\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\label_encoder.ckpt'
+2026-09-23 23:35:24  [INFO    ]  speechbrain.utils.parameter_transfer — Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2026-09-23 23:35:24  [INFO    ]  modules.voice_module — [Voice] Model loaded.
+2026-09-23 23:35:24  [INFO    ]  modules.voice_module — [Voice] Loaded 3 speaker(s) from 'data/voice_dataset/voice_embedding_db.pkl'.
+2026-09-23 23:35:24  [DEBUG   ]  modules.voice_module — [Voice]   2217010: 10 embedding(s), dims=[192]
+2026-09-23 23:35:24  [DEBUG   ]  modules.voice_module — [Voice]   2317009: 10 embedding(s), dims=[192]
+2026-09-23 23:35:24  [DEBUG   ]  modules.voice_module — [Voice]   2317046: 10 embedding(s), dims=[192]
+2026-09-23 23:35:24  [INFO    ]  main — [Main] VoiceModule ready.
+2026-09-23 23:35:24  [DEBUG   ]  modules.lip_module — [Lip] SpeechBrain LazyModule patched.
+2026-09-23 23:35:24  [WARNING ]  modules.lip_module — [Lip] CUDA not available — falling back to CPU.
+2026-09-23 23:35:24  [INFO    ]  modules.lip_module — [Lip] Loading VSR model from 'data/lip_weights/vsr_trlrs2lrs3vox2avsp_base.pth' on cpu...
+2026-09-23 23:35:26  [INFO    ]  speechbrain.integrations.numba.transducer_loss — Numba verbose is deactivated. To enable it, set NUMBA_VERBOSE to 1.
+2026-09-23 23:35:46  [INFO    ]  modules.lip_module — [Lip] VSR model loaded.
+2026-09-23 23:35:46  [INFO    ]  main — [Main] LipModule ready.
+2026-09-23 23:36:47  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:36:47] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:37:06  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:37:06] "GET / HTTP/1.1" 200 -
+2026-09-23 23:37:08  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:37:08] "GET /api/preview.mjpg HTTP/1.1" 200 -
+2026-09-23 23:37:24  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:37:24] "GET / HTTP/1.1" 200 -
+2026-09-23 23:37:43  [ERROR   ]  app — Exception on /api/start [POST]
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\User\OneDrive\Capstone G7\Oencode1\system_main_extracted\system_main\webapp\app.py", line 377, in api_start
+    stop_idle_preview()
+  File "C:\Users\User\OneDrive\Capstone G7\Oencode1\system_main_extracted\system_main\webapp\app.py", line 164, in stop_idle_preview
+    preview_thread.join(timeout=3)
+  File "C:\Program Files\Python310\lib\threading.py", line 1100, in join
+    self._wait_for_tstate_lock(timeout=max(timeout, 0))
+  File "C:\Program Files\Python310\lib\threading.py", line 1118, in _wait_for_tstate_lock
+    self._stop()
+TypeError: 'Event' object is not callable
+2026-09-23 23:37:43  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:37:43] "[35m[1mPOST /api/start HTTP/1.1[0m" 500 -
+2026-09-23 23:37:43  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:37:43] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:37:48  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:37:48] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:37:52  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:37:52] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:37:56  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:37:56] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:38:00  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:38:00] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:38:04  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:38:04] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:38:08  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:38:08] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:38:12  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:38:12] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:38:16  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:38:16] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:38:20  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:38:20] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:38:24  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:38:24] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:38:28  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:38:28] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:38:32  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:38:32] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:38:36  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:38:36] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:38:40  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:38:40] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:38:44  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:38:44] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:38:48  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:38:48] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:38:52  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:38:52] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:38:56  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:38:56] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:39:00  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:39:00] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:39:04  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:39:04] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:39:08  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:39:08] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:39:12  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:39:12] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:39:16  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:39:16] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:39:20  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:39:20] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:39:24  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:39:24] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:39:28  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:39:28] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:39:32  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:39:32] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:39:36  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:39:36] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:39:40  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:39:40] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:39:44  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:39:44] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:39:48  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:39:48] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:39:52  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:39:52] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:39:56  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:39:56] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:40:00  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:40:00] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:40:04  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:40:04] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:40:08  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:40:08] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:40:12  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:40:12] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:40:17  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:40:17] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:40:21  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:40:21] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:40:25  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:40:25] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:40:29  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:40:29] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:40:33  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:40:33] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:40:37  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:40:37] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:40:41  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:40:41] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:40:45  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:40:45] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:40:49  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:40:49] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:40:53  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:40:53] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:40:57  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:40:57] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:41:01  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:41:01] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:41:05  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:41:05] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:41:09  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:41:09] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:41:13  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:41:13] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:41:17  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:41:17] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:41:21  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:41:21] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:41:25  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:41:25] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:41:29  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:41:29] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:41:33  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:41:33] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:41:37  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:41:37] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:41:41  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:41:41] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:41:45  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:41:45] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:41:49  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:41:49] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:41:53  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:41:53] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:41:57  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:41:57] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:42:01  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:42:01] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:42:05  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:42:05] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:42:09  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:42:09] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:42:13  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:42:13] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:42:17  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:42:17] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:42:21  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:42:21] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:42:25  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:42:25] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:42:29  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:42:29] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:42:33  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:42:33] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:42:37  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:42:37] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:42:41  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:42:41] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:42:45  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:42:45] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:42:49  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:42:49] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:42:53  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:42:53] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:42:57  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:42:57] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:43:01  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:43:01] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:43:05  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:43:05] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:43:09  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:43:09] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:43:13  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:43:13] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:43:17  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:43:17] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:43:21  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:43:21] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:43:25  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:43:25] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:43:29  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:43:29] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:43:33  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:43:33] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:43:37  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:43:37] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:43:41  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:43:41] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:43:45  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:43:45] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:43:49  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:43:49] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:43:53  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:43:53] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:43:57  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:43:57] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:44:01  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:44:01] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:44:06  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:44:06] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:44:10  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:44:10] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:44:14  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:44:14] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:44:18  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:44:18] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:44:22  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:44:22] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:44:26  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:44:26] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:44:30  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:44:30] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:44:34  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:44:34] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:44:38  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:44:38] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:44:42  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:44:42] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:44:46  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:44:46] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:44:50  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:44:50] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:44:54  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:44:54] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:44:58  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:44:58] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:45:02  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:45:02] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:45:06  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:45:06] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:45:10  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:45:10] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:45:14  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:45:14] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:45:18  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:45:18] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:45:22  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:45:22] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:45:26  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:45:26] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:45:30  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:45:30] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:45:34  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:45:34] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:45:38  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:45:38] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:45:42  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:45:42] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:45:46  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:45:46] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:45:50  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:45:50] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:45:54  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:45:54] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:45:58  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:45:58] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:46:02  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:46:02] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:46:06  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:46:06] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:46:10  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:46:10] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:46:14  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:46:14] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:46:18  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:46:18] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:46:22  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:46:22] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:46:26  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:46:26] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:46:30  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:46:30] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:46:34  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:46:34] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:46:38  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:46:38] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:46:42  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:46:42] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:46:46  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:46:46] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:46:50  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:46:50] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:46:54  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:46:54] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:46:58  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:46:58] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:47:02  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:47:02] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:47:06  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:47:06] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:47:10  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:47:10] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:47:14  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:47:14] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:47:18  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:47:18] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:47:22  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:47:22] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:47:26  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:47:26] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:47:30  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:47:30] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:47:34  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:47:34] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:47:38  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:47:38] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:47:42  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:47:42] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:47:46  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:47:46] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:47:51  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:47:51] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:47:55  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:47:55] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:47:59  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:47:59] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:48:03  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:48:03] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:48:07  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:48:07] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:48:11  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:48:11] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:48:15  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:48:15] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:48:19  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:48:19] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:48:23  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:48:23] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:48:27  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:48:27] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:48:31  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:48:31] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:48:35  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:48:35] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:48:39  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:48:39] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:48:43  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:48:43] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:48:47  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:48:47] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:48:51  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:48:51] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:48:55  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:48:55] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:48:59  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:48:59] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:49:03  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:49:03] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:49:07  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:49:07] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:49:11  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:49:11] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:49:15  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:49:15] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:49:19  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:49:19] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:49:23  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:49:23] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:49:27  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:49:27] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:49:31  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:49:31] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:49:35  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:49:35] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:49:39  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:49:39] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:49:43  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:49:43] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:51:38  [INFO    ]  root — Logger initialized. Log file: logs/auth_2026-09-23.log
+2026-09-23 23:51:38  [INFO    ]  core.config_loader — Config loaded successfully.
+2026-09-23 23:51:38  [INFO    ]  core.config_loader — Active modules: ['face', 'voice', 'lip']
+2026-09-23 23:51:38  [INFO    ]  root — Logger initialized. Log file: logs/auth_2026-09-23.log
+2026-09-23 23:51:38  [INFO    ]  werkzeug — [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-09-23 23:51:38  [INFO    ]  werkzeug — [33mPress CTRL+C to quit[0m
+2026-09-23 23:51:42  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:51:42] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:51:42  [DEBUG   ]  tensorflow — Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2026-09-23 23:51:44  [DEBUG   ]  h5py._conv — Creating converter from 7 to 5
+2026-09-23 23:51:44  [DEBUG   ]  h5py._conv — Creating converter from 5 to 7
+2026-09-23 23:51:44  [DEBUG   ]  h5py._conv — Creating converter from 7 to 5
+2026-09-23 23:51:44  [DEBUG   ]  h5py._conv — Creating converter from 5 to 7
+2026-09-23 23:51:45  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:51:45] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:51:48  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:51:48] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:51:51  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:51:51] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:51:53  [DEBUG   ]  matplotlib — matplotlib data path: C:\Program Files\Python310\lib\site-packages\matplotlib\mpl-data
+2026-09-23 23:51:53  [DEBUG   ]  matplotlib — CONFIGDIR=C:\Users\User\.matplotlib
+2026-09-23 23:51:53  [DEBUG   ]  matplotlib — interactive is False
+2026-09-23 23:51:53  [DEBUG   ]  matplotlib — platform is win32
+2026-09-23 23:51:53  [DEBUG   ]  matplotlib — CACHEDIR=C:\Users\User\.matplotlib
+2026-09-23 23:51:54  [DEBUG   ]  matplotlib.font_manager — Using fontManager instance from C:\Users\User\.matplotlib\fontlist-v390.json
+2026-09-23 23:51:54  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:51:54] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:51:57  [INFO    ]  modules.face_module — [Face] Loaded 45 individual embeddings across 3 identities from 'data/face_embeddings/student_embeddings.pkl'.
+2026-09-23 23:51:57  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:51:57] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:51:58  [INFO    ]  modules.face_module — [Face] MTCNN detector initialized.
+2026-09-23 23:51:58  [INFO    ]  main — [Main] FaceModule ready.
+2026-09-23 23:52:00  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:52:00] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:52:03  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:52:03] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:52:06  [DEBUG   ]  torio._extension.utils — Loading FFmpeg6
+2026-09-23 23:52:06  [DEBUG   ]  torio._extension.utils — Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torch\_ops.py", line 1392, in load_library
+    ctypes.CDLL(path)
+  File "C:\Program Files\Python310\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\lib\libtorio_ffmpeg6.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2026-09-23 23:52:06  [DEBUG   ]  torio._extension.utils — Loading FFmpeg5
+2026-09-23 23:52:06  [DEBUG   ]  torio._extension.utils — Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torch\_ops.py", line 1392, in load_library
+    ctypes.CDLL(path)
+  File "C:\Program Files\Python310\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\lib\libtorio_ffmpeg5.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2026-09-23 23:52:06  [DEBUG   ]  torio._extension.utils — Loading FFmpeg4
+2026-09-23 23:52:06  [DEBUG   ]  torio._extension.utils — Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torch\_ops.py", line 1392, in load_library
+    ctypes.CDLL(path)
+  File "C:\Program Files\Python310\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\lib\libtorio_ffmpeg4.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2026-09-23 23:52:06  [DEBUG   ]  torio._extension.utils — Loading FFmpeg
+2026-09-23 23:52:06  [DEBUG   ]  torio._extension.utils — Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "C:\Users\User\AppData\Roaming\Python\Python310\site-packages\torio\_extension\utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2026-09-23 23:52:06  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:52:06] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:52:07  [INFO    ]  speechbrain.utils.quirks — Applied quirks (see `speechbrain.utils.quirks`): [disable_jit_profiling, allow_tf32]
+2026-09-23 23:52:07  [INFO    ]  speechbrain.utils.quirks — Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2026-09-23 23:52:07  [INFO    ]  modules.voice_module — [Voice] Loading ECAPA-TDNN on cpu...
+2026-09-23 23:52:07  [INFO    ]  speechbrain.utils.fetching — Fetch hyperparams.yaml: Using file found at 'C:\Users\User\OneDrive\Capstone G7\Oencode1\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\hyperparams.yaml'
+2026-09-23 23:52:07  [INFO    ]  speechbrain.utils.fetching — Fetch embedding_model.ckpt: Using file found at 'C:\Users\User\OneDrive\Capstone G7\Oencode1\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\embedding_model.ckpt'
+2026-09-23 23:52:07  [INFO    ]  speechbrain.utils.fetching — Fetch mean_var_norm_emb.ckpt: Using file found at 'C:\Users\User\OneDrive\Capstone G7\Oencode1\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\mean_var_norm_emb.ckpt'
+2026-09-23 23:52:07  [INFO    ]  speechbrain.utils.fetching — Fetch classifier.ckpt: Using file found at 'C:\Users\User\OneDrive\Capstone G7\Oencode1\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\classifier.ckpt'
+2026-09-23 23:52:07  [INFO    ]  speechbrain.utils.fetching — Fetch label_encoder.txt: Using file found at 'C:\Users\User\OneDrive\Capstone G7\Oencode1\system_main_extracted\system_main\data\pretrained_models\spkrec-ecapa-voxceleb\label_encoder.ckpt'
+2026-09-23 23:52:07  [INFO    ]  speechbrain.utils.parameter_transfer — Loading pretrained files for: embedding_model, mean_var_norm_emb, classifier, label_encoder
+2026-09-23 23:52:08  [INFO    ]  modules.voice_module — [Voice] Model loaded.
+2026-09-23 23:52:08  [INFO    ]  modules.voice_module — [Voice] Loaded 3 speaker(s) from 'data/voice_dataset/voice_embedding_db.pkl'.
+2026-09-23 23:52:08  [DEBUG   ]  modules.voice_module — [Voice]   2217010: 10 embedding(s), dims=[192]
+2026-09-23 23:52:08  [DEBUG   ]  modules.voice_module — [Voice]   2317009: 10 embedding(s), dims=[192]
+2026-09-23 23:52:08  [DEBUG   ]  modules.voice_module — [Voice]   2317046: 10 embedding(s), dims=[192]
+2026-09-23 23:52:08  [INFO    ]  main — [Main] VoiceModule ready.
+2026-09-23 23:52:08  [DEBUG   ]  modules.lip_module — [Lip] SpeechBrain LazyModule patched.
+2026-09-23 23:52:08  [WARNING ]  modules.lip_module — [Lip] CUDA not available — falling back to CPU.
+2026-09-23 23:52:08  [INFO    ]  modules.lip_module — [Lip] Loading VSR model from 'data/lip_weights/vsr_trlrs2lrs3vox2avsp_base.pth' on cpu...
+2026-09-23 23:52:09  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:52:09] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:52:09  [INFO    ]  speechbrain.integrations.numba.transducer_loss — Numba verbose is deactivated. To enable it, set NUMBA_VERBOSE to 1.
+2026-09-23 23:52:12  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:52:12] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:52:15  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:52:15] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:52:18  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:52:18] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:52:21  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:52:21] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:52:24  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:52:24] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:52:27  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:52:27] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:52:28  [INFO    ]  modules.lip_module — [Lip] VSR model loaded.
+2026-09-23 23:52:28  [INFO    ]  main — [Main] LipModule ready.
+2026-09-23 23:52:30  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:52:30] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:52:43  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:52:43] "POST /api/start HTTP/1.1" 200 -
+2026-09-23 23:52:43  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:52:43] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:52:47  [INFO    ]  core.capture_session — [Capture] Sentence chosen: 'Hello Triguard, verify my identity now' | Recording for 5s
+2026-09-23 23:52:47  [ERROR   ]  webapp — Auth session failed
+Traceback (most recent call last):
+  File "C:\Users\User\OneDrive\Capstone G7\Oencode1\system_main_extracted\system_main\webapp\app.py", line 259, in run_auth_session
+    capture = session.run()
+  File "C:\Users\User\OneDrive\Capstone G7\Oencode1\system_main_extracted\system_main\core\capture_session.py", line 113, in run
+    print("\n  [●] Recording started - speak the sentence clearly...\n")
+  File "C:\Program Files\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u25cf' in position 5: character maps to <undefined>
+2026-09-23 23:52:48  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:52:48] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:52:53  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:52:53] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:52:58  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:52:58] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:53:03  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:53:03] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:53:08  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:53:08] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:53:13  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:53:13] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:53:18  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:53:18] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:53:23  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:53:23] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:53:28  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:53:28] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:53:33  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:53:33] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:53:38  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:53:38] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:53:43  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:53:43] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:53:48  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:53:48] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:53:53  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:53:53] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:53:58  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:53:58] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:54:03  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:54:03] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:54:08  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:54:08] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:54:14  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:54:14] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:54:19  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:54:19] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:54:24  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:54:24] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:54:29  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:54:29] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:54:34  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:54:34] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:54:39  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:54:39] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:54:44  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:54:44] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:54:49  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:54:49] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:54:54  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:54:54] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:54:59  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:54:59] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:55:04  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:55:04] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:55:09  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:55:09] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:55:14  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:55:14] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:55:19  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:55:19] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:55:24  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:55:24] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:55:29  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:55:29] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:55:34  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:55:34] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:55:39  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:55:39] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:55:44  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:55:44] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:55:49  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:55:49] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:55:54  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:55:54] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:55:59  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:55:59] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:56:04  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:56:04] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:56:09  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:56:09] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:56:14  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:56:14] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:56:19  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:56:19] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:56:24  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:56:24] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:56:29  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:56:29] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:56:34  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:56:34] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:56:39  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:56:39] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:56:44  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:56:44] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:56:49  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:56:49] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:56:54  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:56:54] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:56:59  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:56:59] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:57:04  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:57:04] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:57:09  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:57:09] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:57:14  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:57:14] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:57:19  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:57:19] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:57:24  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:57:24] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:57:29  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:57:29] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:57:34  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:57:34] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:57:39  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:57:39] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:57:44  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:57:44] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:57:49  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:57:49] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:57:54  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:57:54] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:57:59  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:57:59] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:58:04  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:58:04] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:58:09  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:58:09] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:58:14  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:58:14] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:58:19  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:58:19] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:58:25  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:58:25] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:58:30  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:58:30] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:58:35  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:58:35] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:58:40  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:58:40] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:58:45  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:58:45] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:58:50  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:58:50] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:58:55  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:58:55] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:59:00  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:59:00] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:59:05  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:59:05] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:59:10  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:59:10] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:59:15  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:59:15] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:59:20  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:59:20] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:59:25  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:59:25] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:59:30  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:59:30] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:59:35  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:59:35] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:59:40  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:59:40] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:59:45  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:59:45] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:59:50  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:59:50] "GET /api/status HTTP/1.1" 200 -
+2026-09-23 23:59:55  [INFO    ]  werkzeug — 127.0.0.1 - - [23/Sep/2026 23:59:55] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:00:00  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:00:00] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:00:05  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:00:05] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:00:10  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:00:10] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:00:15  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:00:15] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:00:20  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:00:20] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:00:25  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:00:25] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:00:30  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:00:30] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:00:35  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:00:35] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:00:40  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:00:40] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:00:45  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:00:45] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:00:50  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:00:50] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:00:55  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:00:55] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:01:00  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:01:00] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:01:05  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:01:05] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:01:10  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:01:10] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:01:15  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:01:15] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:01:20  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:01:20] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:01:25  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:01:25] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:01:30  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:01:30] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:01:35  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:01:35] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:01:40  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:01:40] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:01:45  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:01:45] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:01:50  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:01:50] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:01:55  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:01:55] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:02:00  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:02:00] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:02:05  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:02:05] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:02:10  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:02:10] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:02:15  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:02:15] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:02:20  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:02:20] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:02:25  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:02:25] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:02:30  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:02:30] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:02:35  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:02:35] "GET /api/status HTTP/1.1" 200 -
+2026-09-24 00:02:40  [INFO    ]  werkzeug — 127.0.0.1 - - [24/Sep/2026 00:02:40] "GET /api/status HTTP/1.1" 200 -
